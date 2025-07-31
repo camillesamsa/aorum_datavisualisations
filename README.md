@@ -14,7 +14,7 @@ Le dépôt est organisé en deux dossiers principaux :
 - `visualisations/`  
   Contient les **interfaces HTML/CSS/JS** pour les visualisations interactives. Ces visualisations utilisent des **fichiers CSV** comme source de données, générés à partir des tableurs initiaux.
 
-- `traitements/`  
+- `traitement/`  
   Contient les **scripts Python** (notebooks Jupyter) servant à **nettoyer**, **transformer** et **harmoniser** les données issues des **tableurs au format `.ods`**.  
   Ces scripts produisent les fichiers CSV utilisés par les visualisations.
 
