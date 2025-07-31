@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Provenance oeuvres</title>
+  <!-- Import de la bibliothèque D3.js version 6 -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <!-- Librairie pour exporter en PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- Polices Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+  <!-- Librairies pour exporter en PDF -->
+
+  <style>
+
+    /* Mise en page générale du corps du document */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #000;
+      padding: 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    /* Style du titre principal */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #000;
+      font-weight: 300;
+      text-align: center;
+      font-size: 2 rem;
+    }
+
+    /* Style du paragraphe descriptif */
+    .diagram-description {
+      max-width: 980px;
+      margin: 0 auto 30px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #000;
+    }
+
+    /* Style du conteneur pour le graphique */
+    .chart-container { 
+      position: relative;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    }
+
+    #download-pdf {
+      font-family: 'Inter', sans-serif;
+      border-radius: 15px;
+      padding: 6px 12px; 
+      font-size: 12px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      background-color: #e7e5e7;
+      color: #444;
+      border: 1px solid #FFF;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Style du tooltip */
+    .tooltip { 
+      position: absolute;
+      background: #ffffff;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      font-size: 14px;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    /* Style des barres du graphique, avec effet de survol */
+    .bar { 
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .bar:hover {
+      opacity: 0.80;
+    }
+
+    /* Étiquettes numériques affichant la valeur des barres */
+    .value-label {
+      font-size: 13px;
+      fill: #9f7040;
+      font-weight: 600;
+    }
+
+    /* Style du bouton "Revenir aux aires géographiques" */
+    .back-button { 
+      visibility: hidden;
+      pointer-events: none;
+      height: 18px;
+      margin-bottom: 10px;
+      font-size: 14px;
+      text-decoration: underline;
+      color: #000;
+      cursor: pointer;
+      transition: visibility 0.2s, opacity 0.2s;
+    }
+
+    .back-button.visible {
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .axis text {
+      font-family: 'Playfair Display', serif;
+      font-size: 13px;
+      color: #332C1F;
+    }
+
+  </style>
+</head>
+
+<!-- Structure de la page -->
+<body>
+
+<!-- Titre principal -->
+  <h1>Provenance des œuvres</h1>
+
+  <!-- Paragraphe explicatif -->
+  <div class="diagram-description">
+    <strong>Comment lire ce graphique :</strong><br>
+    Chaque barre représente une région d'où proviennent des œuvres intégrant de l'or (XVI<sup>e</sup>-XVII<sup>e</sup> siècle). L'axe des abscisses représente le nombre d'oeuvres produites, l'axe des ordonnées représente les aires géographiques ou les villes.
+    <ul>
+      <dt>Survolez une barre pour voir le nombre d'œuvres et leur degré de certitude.</dt>
+      <dt>Cliquez sur une région pour explorer les villes correspondantes.</dt>
+      <dt>Utilisez « Retour aux régions » pour revenir en arrière.</dt>
+    </ul>
+  </div>
+
+  <!-- Bouton "Afficher les provenances incertaines" -->
+  <div style="margin-bottom: 20px;">
+    <label><input type="checkbox" id="showUncertain" checked> Afficher les provenances incertaines</label>
+  </div>
+
+  <!-- Bouton pour exporter en PDF -->
+  <div style="margin-bottom: 10px;">
+    <button id="download-pdf">Télécharger en PDF</button>
+  </div>
+
+  <!-- Bouton "Retour aux régions" -->
+  <div class="chart-container">
+    <div class="back-button">← Retour aux régions</div>
+    <svg width="900" height="500"></svg>
+  </div>
+
+  <!-- Etiquette tooltip -->
+  <div class="tooltip"></div>
+
+  <!-- Astérisque Péninsule italienne  -->
+  <div id="ville-francaise-note" style="margin-top: 8px; font-size: 13px; font-family: 'Lora', serif; color: #444; display: none;">
+    <em>* Il s'agit d'une œuvre peinte en France par un artiste italien pour François Iᵉʳ.</em>
+  </div>
+
+  <!-- Astérisque Péninsule italienne  -->
+  <div id="ville-francaise-note" style="margin-top: 8px; font-size: 13px; font-family: 'Lora', serif; color: #444; display: none;">
+    <em>* Il s'agit d'une œuvre peinte en France par un artiste italien pour François Iᵉʳ.</em>
+  </div>
+
+  <!-- Note en bas de page -->
+  <div style="margin-top: 15px; font-size: 14px; font-family: 'Lora', serif; color: #444;">
+    <strong>Note :</strong> Les couleurs n'ont pas de signification spécifique, elles servent à différencier visuellement les catégories.
+  </div>
+
+  <script>
+    // Initialisation du SVG et des marges
+    const svg = d3.select("svg");
+    const margin = { top: 20, right: 40, bottom: 60, left: 220 };
+    const width = +svg.attr("width") - margin.left - margin.right;
+    const height = +svg.attr("height") - margin.top - margin.bottom;
+
+    // Groupe de dessin principal avec marges internes
+    const g = svg.append("g").attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Définition des échelles
+    // X : échelle linéaire pour le nombre d'œuvres
+    // Y : échelle par bande pour les noms des régions ou villes
+
+    let x = d3.scaleLinear().range([0, width]);
+    let y = d3.scaleBand().rangeRound([0, height]).padding(0.1);
+
+    // Sélections utiles pour la bulle d'information et le bouton retour
+    const tooltip = d3.select(".tooltip");
+    const backButton = d3.select(".back-button");
+
+    // Palette personnalisée de couleurs pour différencier visuellement les catégories
+    const colorPalette =  
+
+      ["#c68600",
+      "#fab85b",
+      "#ffca3f",
+      "#ffe72f",
+      "#fffa9e",
+      "#b35700",
+      "#d17129",
+      "#6d0704",
+      "#ca1400",
+      "#f27552",
+      "#ffae7e",
+      "#a06e31"];
+
+    // Échelle ordinale pour attribuer une couleur à chaque catégorie
+    const colorScale = d3.scaleOrdinal()
+      .range(colorPalette);
+
+    // Chargement du fichier CSV avec délimiteur ";"
+    d3.dsv(";", "diagramme_barres.csv").then(rawData => {
+
+      // Filtrage des données : on garde celles avec une région et une ville
+      const checkbox = document.getElementById("showUncertain");
+
+      // Fonction qui vérifie si une œuvre doit être incluse selon les critères de certitude
+      function shouldIncludeItem(item, showUncertain) {
+        // Vérifie que les champs nécessaires existent
+        if (!item["spatial:harmonise"] || !item["cityOfCreation:harmonise"]) {
+          return false;
+        }
+
+        // Convertit les valeurs d'incertitude en nombres (0 = certain, 1 = incertain)
+        const spatialUncertain = parseInt(item["spatial:incertain"]) || 0;
+        const cityUncertain = parseInt(item["cityOfCreation:incertain"]) || 0;
+
+        if (showUncertain) {
+          // Si on affiche les incertaines : inclure toutes (certaines ET incertaines)
+          return true;
+        } else {
+          // Si on n'affiche que les certaines : exclure celles qui ont 1 dans spatial:incertain OU cityOfCreation:incertain
+          return spatialUncertain === 0 && cityUncertain === 0;
+        }
+      }
+
+      // Filtre les données selon l'état de la case à cocher "Afficher les provenances incertaines".
+      function getFilteredData() {
+        return rawData.filter(item => shouldIncludeItem(item, checkbox.checked));
+      }
+
+      // Comptage du nombre d'œuvres par région (agrégation simple)
+      let data = getFilteredData();
+      let regionMap = d3.rollup(data, v => v.length, d => d["spatial:harmonise"]);
+
+      // Transformation en tableau trié décroissant par nombre d'œuvres
+      const topRegions = Array.from(regionMap, ([name, value]) => ({ name, value }))
+        .sort((a, b) => b.value - a.value);
+
+      // Première mise à jour du graphique avec les régions
+      updateChart(topRegions, "région");
+
+      // Ajout de l'écouteur sur la case à cocher
+      checkbox.addEventListener("change", () => {
+        data = getFilteredData();
+        regionMap = d3.rollup(data, v => v.length, d => d["spatial:harmonise"]);
+        const topRegions = Array.from(regionMap, ([name, value]) => ({ name, value }))
+          .sort((a, b) => b.value - a.value);
+
+        updateChart(topRegions, "région");
+
+        // On masque le bouton retour si on change le filtre
+        backButton.classed("visible", false); 
+      });
+
+      // Fonction pour mettre à jour le graphique selon le niveau (région ou ville)
+      function updateChart(dataArray, level, selectedRegion = null) {
+
+        // Définit le domaine de l'axe X en fonction de la valeur maximale
+        x.domain([0, d3.max(dataArray, d => d.value)]);
+
+        // Définit les catégories de l'axe Y (ordre vertical)
+        y.domain(dataArray.map(d => d.name));
+
+        // Met à jour les couleurs en associant chaque nom à une couleur
+        colorScale.domain(dataArray.map(d => d.name));
+
+        // Supprime les anciens axes du graphique
+        g.selectAll(".axis").remove();
+
+        // Lie les données aux éléments rect (éléments SVG (<rect>) utilisés pour dessiner les barres du diagramme) existants représentant les barres
+        const bars = g.selectAll(".bar")
+          .data(dataArray, d => d.name);
+
+        // Ajout du titre pour l'axe X (horizontal)
+        g.append("text")
+          .attr("class", "axis-title")
+          .attr("text-anchor", "middle")
+          .attr("x", width / 2)
+          .attr("y", height + margin.bottom -1)
+          .attr("fill", "var(--color-text)")
+          .style("font-family", "'Playfair Display', serif")
+          .style("font-size", "14px")
+          .text("Nombre d'œuvres");
+
+        // Ajout du titre pour l'axe Y (vertical)
+        g.append("text")
+          .attr("class", "axis-title")
+          .attr("text-anchor", "middle")
+          .attr("transform", `translate(${-margin.left + 10}, ${height / 2}) rotate(-90)`)
+          .attr("fill", "var(--color-text)")
+          .style("font-family", "'Playfair Display', serif")
+          .style("font-size", "14px")
+          .text("Aires géographiques");
+
+        // Supprime les anciennes barres avec une transition de largeur vers 0
+        bars.exit()
+          .transition().duration(500)
+          .attr("width", 0)
+          .remove();
+
+        // Met à jour les barres existantes avec leurs nouvelles dimensions et couleur
+        bars.transition()
+          .duration(800)
+          .attr("y", d => y(d.name))
+          .attr("height", y.bandwidth())
+          .attr("width", d => x(d.value))
+          .attr("fill", d => colorScale(d.name));
+
+        // Crée les nouvelles barres qui n'existaient pas encore
+        bars.enter()
+          .append("rect")
+          .attr("class", "bar")
+          .attr("x", 0)
+          .attr("y", d => y(d.name))
+          .attr("height", y.bandwidth())
+          .attr("width", 0)
+          .attr("fill", d => colorScale(d.name))
+
+          // Lorsque le curseur est positionné sur la barre
+          .on("mouseover", (event, d) => {
+
+            // Récupère les données filtrées en fonction de l'état de la case à cocher
+            const fullData = getFilteredData();
+
+            // Filtre les données pertinentes selon le niveau d'affichage (région ou ville)
+            const relevantItems = fullData.filter(item =>
+              (level === "région" && item["spatial:harmonise"] === d.name) ||
+              (level === "ville" && item["cityOfCreation:harmonise"] === d.name)
+            );
+
+            // Si on affiche les incertaines, on calcule le détail certain/incertain
+            let certainCount = 0;
+            let uncertainCount = 0;
+
+            if (checkbox.checked) {
+              // Compte les œuvres selon leur degré de certitude
+              relevantItems.forEach(item => {
+                const spatialUncertain = parseInt(item["spatial:incertain"]) || 0;
+                const cityUncertain = parseInt(item["cityOfCreation:incertain"]) || 0;
+                
+                if (spatialUncertain === 0 && cityUncertain === 0) {
+                  certainCount++;
+                } else {
+                  uncertainCount++;
+                }
+              });
+            } else {
+              // Si on n'affiche que les certaines, toutes sont certaines
+              certainCount = relevantItems.length;
+              uncertainCount = 0;
+            }
+
+            // Affiche la bulle d'information avec les détails
+            tooltip
+              .transition().duration(200).style("opacity", 1);
+
+            // Définit le contenu HTML de l'info-bulle
+            tooltip
+              .html(`
+                <strong>${d.name}</strong><br> 
+                ${relevantItems.length} œuvre(s)<br>
+                → ${certainCount} certaines<br>
+                → ${uncertainCount} incertaines
+              `)
+
+              // Positionne l'info-bulle en pixels par rapport à la position du curseur
+              .style("left", (event.pageX + 15) + "px")
+              .style("top", (event.pageY - 28) + "px");
+          })
+
+          // Lorsque le curseur quitte la barre 
+          .on("mouseout", () => { 
+
+            // Masque la bulle d'information lors du survol
+            tooltip.transition().duration(200).style("opacity", 0);
+          })
+
+          // Au clic sur une barre représentant une région, afficher le détail par ville
+          .on("click", (event, d) => {
+            if (level === "région") {
+
+              // Si clic sur une région, on affiche les villes de cette région
+              const filtered = getFilteredData().filter(item => item["spatial:harmonise"] === d.name);
+
+              // Regroupe les œuvres par ville
+              const cityMap = d3.rollup(filtered, v => v.length, d => d["cityOfCreation:harmonise"]);
+
+              // Convertit la map en tableau trié par nombre d'œuvres
+              const cityData = Array.from(cityMap, ([name, value]) => ({ name, value }))
+                .sort((a, b) => b.value - a.value);
+                if (selectedRegion === "Péninsule italienne") {
+                  cityData.forEach(d => {
+                    if (d.name === "ville française") {
+                      d.name += " *";
+                    }
+                  });
+                }
+
+              // Met à jour le graphique avec les données des villes
+              updateChart(cityData, "ville", d.name);
+
+              // Affiche le bouton "Retour"
+              backButton.classed("visible", true);
+            }
+          })
+
+          .transition()
+          .duration(800)
+          .attr("width", d => x(d.value));
+
+        // Sélectionne tous les labels de valeur associés aux barres
+        const labels = g.selectAll(".value-label")
+          .data(dataArray, d => d.name);
+
+        // Supprime les anciens labels avec une transition d'opacité
+        labels.exit()
+          .transition()
+          .duration(500)
+          .style("opacity", 0)
+          .remove();
+
+        // Met à jour la position et le texte des labels existants
+        labels.transition()
+          .duration(800)
+          .attr("x", d => x(d.value) + 5)
+          .attr("y", d => y(d.name) + y.bandwidth() / 2 + 4)
+          .text(d => d.value);
+
+        // Crée de nouveaux labels pour les nouvelles barres
+        labels.enter()
+          .append("text")
+          .attr("class", "value-label")
+          .attr("x", d => x(d.value) + 5)
+          .attr("y", d => y(d.name) + y.bandwidth() / 2 + 4)
+          .style("opacity", 0)
+          .text(d => d.value)
+          .transition()
+          .delay(400)
+          .duration(400)
+          .style("opacity", 1);
+
+        // Ajoute l'axe vertical (nom des régions ou villes)
+        g.append("g")
+          .attr("class", "axis")
+          .call(d3.axisLeft(y));
+
+        // Ajoute l'axe horizontal (valeurs numériques)
+        g.append("g")
+          .attr("class", "axis")
+          .attr("transform", `translate(0,${height})`)
+          .call(d3.axisBottom(x).ticks(5));
+
+        // Affichage conditionnel de la note contextuelle
+        const note = document.getElementById("ville-francaise-note");
+        if (level === "ville" && selectedRegion === "Péninsule italienne") {
+          note.style.display = "block";
+        } else {
+          note.style.display = "none";
+        }
+      }
+
+      // Ajout d'un écouteur de clic sur le bouton de retour
+      backButton.on("click", () => {
+
+        // Mise à jour du graphique pour afficher à nouveau les régions principales
+        updateChart(topRegions, "région");
+
+        // Masque le bouton "Retour aux régions" après le clic
+        backButton.classed("visible", false);
+      });
+
+      // Export en PDF avec application temporaire de styles
+      document.getElementById("download-pdf").addEventListener("click", () => {
+        const container = document.querySelector(".chart-container");
+        const tooltip = document.querySelector(".tooltip");
+
+        // Sauvegarde des styles originaux
+        const originalStyles = {
+          containerBoxShadow: container.style.boxShadow,
+          containerBorder: container.style.border,
+          containerBorderRadius: container.style.borderRadius,
+          containerBackground: container.style.background,
+          tooltipDisplay: tooltip.style.display
+        };
+        
+        // Application des styles pour l'export
+        container.style.boxShadow = 'none';
+        container.style.border = 'none';
+        container.style.borderRadius = '0';
+        container.style.background = '#ffffff';
+        container.style.backgroundColor = '#ffffff';
+        tooltip.style.display = 'none';
+        
+        // Masque temporairement le bouton retour s'il est visible
+        const backButton = document.querySelector('.back-button');
+        const backButtonWasVisible = backButton.classList.contains('visible');
+        if (backButtonWasVisible) {
+          backButton.style.display = 'none';
+        }
+
+        // Configuration pour html2canvas
+        const options = {
+          backgroundColor: "#ffffff",
+          scale: 2,
+          useCORS: true,
+          allowTaint: true,
+          removeContainer: false,
+          foreignObjectRendering: true,
+          logging: false,
+          width: container.scrollWidth,
+          height: container.scrollHeight,
+          windowWidth: container.scrollWidth,
+          windowHeight: container.scrollHeight,
+          onclone: (clonedDoc) => {
+            
+            // Applique des styles supplémentaires au clone
+            const clonedContainer = clonedDoc.querySelector('.chart-container');
+            const clonedSvg = clonedDoc.querySelector('svg');
+            
+            if (clonedContainer) {
+              clonedContainer.style.backgroundColor = '#ffffff';
+              clonedContainer.style.background = '#ffffff';
+            }
+            
+            if (clonedSvg) {
+              clonedSvg.style.backgroundColor = '#ffffff';
+              clonedSvg.setAttribute('style', 'background-color: #ffffff;');
+            }
+          }
+        };
+
+        html2canvas(container, { backgroundColor: "#ffffff" }).then(canvas => {
+          // Restaure les styles originaux
+          container.style.boxShadow = originalStyles.containerBoxShadow;
+          container.style.border = originalStyles.containerBorder;
+          container.style.borderRadius = originalStyles.containerBorderRadius;
+          container.style.background = originalStyles.containerBackground;
+          tooltip.style.display = originalStyles.tooltipDisplay;
+          
+          if (backButtonWasVisible) {
+            backButton.style.display = '';
+          }
+
+          const imgData = canvas.toDataURL("image/png", 1.0);
+          const { jsPDF } = window.jspdf;
+          
+          const pdf = new jsPDF({
+            orientation: "landscape",
+            unit: "mm",
+            format: "a4"
+          });
+
+          const pageWidth = pdf.internal.pageSize.getWidth();
+          const pageHeight = pdf.internal.pageSize.getHeight();
+          const margin = 20;
+          const usableWidth = pageWidth - margin * 2;
+          const usableHeight = pageHeight - margin * 2;
+
+          // Calcul des dimensions
+          const imgWidth = usableWidth;
+          const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+          // En-tête
+          const date = new Date().toLocaleDateString("fr-FR");
+          const time = new Date().toLocaleTimeString("fr-FR", { 
+            hour: '2-digit', 
+            minute: '2-digit' 
+          });
+          const lineHeight = 6;
+          let y = margin;
+
+          // Titre
+          pdf.setFont("Helvetica", "bold");
+          pdf.setFontSize(16);
+          pdf.setTextColor(0, 0, 0);
+          pdf.text("Provenance des œuvres (XVIe-XVIIe siècle)", margin, y);
+          y += lineHeight + 2;
+
+          // Métadonnées
+          pdf.setFont("Helvetica", "normal");
+          pdf.setFontSize(10);
+          pdf.setTextColor(100, 100, 100);
+          pdf.text(`Exporté le ${date} à ${time}`, margin, y);
+          y += lineHeight;
+
+          const filtreIncertitudes = document.getElementById("showUncertain").checked
+            ? "incluses"
+            : "exclues";
+          pdf.text(`Provenances incertaines : ${filtreIncertitudes}`, margin, y);
+          y += lineHeight + 5;
+
+          // Ajustement de l'image pour qu'elle tienne dans la page
+          const maxImageHeight = usableHeight - (y - margin) - 15; // 15mm pour le pied de page
+          const finalImageHeight = Math.min(imgHeight, maxImageHeight);
+          const finalImageWidth = (finalImageHeight * canvas.width) / canvas.height;
+          const imageX = margin + (usableWidth - finalImageWidth) / 2;
+
+          // Ajout de l'image
+          pdf.addImage(imgData, "PNG", imageX, y, finalImageWidth, finalImageHeight);
+
+          // Pied de page
+          pdf.setFontSize(8);
+          pdf.setTextColor(150, 150, 150);
+          pdf.text(
+            "Note : Les couleurs n'ont pas de signification spécifique, elles servent à différencier visuellement les catégories.", 
+            margin, 
+            pageHeight - 10
+          );
+
+          // Sauvegarde
+          const filename = `provenance_oeuvres_${date.replace(/\//g, '-')}.pdf`;
+          pdf.save(filename);
+          
+        }).catch(error => {
+          // Restaure les styles en cas d'erreur
+          container.style.boxShadow = originalStyles.containerBoxShadow;
+          container.style.border = originalStyles.containerBorder;
+          container.style.borderRadius = originalStyles.containerBorderRadius;
+          container.style.background = originalStyles.containerBackground;
+          tooltip.style.display = originalStyles.tooltipDisplay;
+          
+          if (backButtonWasVisible) {
+            backButton.style.display = '';
+          }
+          
+          console.error("Erreur lors de l'export PDF:", error);
+          alert("Une erreur est survenue lors de l'export PDF. Veuillez réessayer.");
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Histogramme Production</title>
+  <!-- Import de la bibliothèque D3.js version 6 -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <!-- html2canvas pour convertir l’élément DOM en image -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <!-- jsPDF pour générer le PDF -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <!-- Polices Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora&display=swap" rel="stylesheet">
+  <style>
+
+    /* Mise en page générale du corps du document */
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FFFF;
+      color: #000;
+      margin: 0;
+      padding: 20px;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    /* Style du titre principal */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      color: #000;
+      font-weight: 300;
+      font-size: 2rem;
+      text-align: center;
+    }
+
+     /* Style du paragraphe descriptif */
+    .histogram-description {
+      max-width: 980px;
+      margin: 0 auto 30px;
+      font-size: 15px;
+      line-height: 1.7;
+      color: #000;
+      text-align: center;
+    }
+
+    .histogram-description p {
+      margin: 6px 0;
+    }
+
+    /* Style de la note en bas de page */
+    .note {
+      margin-top: 15px; 
+      font-size: 14px; 
+      font-family: 'Lora', serif; 
+      color: #444;
+      text-align: center;
+    }
+
+    /* Style du conteneur des contrôles (filtres, boutons) */
+    .controls-container {
+      max-width: 1200px;
+      margin: 0 auto 30px;
+      background-color: #fafafa;
+      border: 1px solid #e0e0e0;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    /* Section du filtre d'incertitude */
+    .uncertainty-filter {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #ddd;
+    }
+
+    /* Style des labels dans le filtre d'incertitude */
+    .uncertainty-filter label {
+      font-family: 'Lora', serif;
+      font-size: 16px;
+      font-weight: 500;
+      color: #333;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Style des cases à cocher dans le filtre d'incertitude */
+    .uncertainty-filter input {
+      accent-color: #d3d3d3;;
+      transform: scale(1.2);
+    }
+
+    /* En-tête des filtres de région */
+    .region-filters-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+
+    /* Titre des filtres de région */
+    .region-filters-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+      margin: 0;
+    }
+
+    /* Style du bouton "Tout sélectionner/Tout désélectionner" */
+    .toggle-button {
+      font-family: 'Inter', sans-serif;
+      border-radius: 15px;
+      padding: 6px 12px; 
+      font-size: 12px;
+      cursor: pointer;
+      margin-bottom: 12px;
+      background-color: #e7e5e7;
+      color: #444;
+      border: 1px solid #FFF;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+    }
+
+    /* Effet au survol du bouton */
+    .toggle-button:hover {
+      background-color: #b7b5b7;
+      color: #FFF;
+    }
+
+    /* Conteneur des filtres de région */
+    .region-filters {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 8px 12px;
+    }
+
+    /* Chaque item de filtre */
+    .filter-item {
+      padding: 4px 8px;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+      border-radius: 4px;
+      transition: background-color 0.2s ease;
+    }
+
+    /* Effet au survol d'un filtre */
+    .filter-item:hover {
+      background-color: #f0f0f0;
+    }
+
+    /* Case à cocher dans chaque filtre */
+    .filter-item input {
+      accent-color: #b7b5b7;
+      transform: scale(1.1);
+    }
+
+    /* Petite pastille colorée dans les filtres (pour indiquer la région) */
+    .filter-item .region-color {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      border: 1px solid #999;
+      flex-shrink: 0;
+    }
+
+    /* Conteneur principal pour graphique + légende */
+    .chart-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      max-width: 1500px;
+      margin: 0 auto;
+      gap: 30px;
+    }
+
+    /* Conteneur du graphique */
+    .chart-wrapper {
+      flex: 1;
+    }
+
+    /* Style général pour les graphiques SVG */
+    svg {
+      background-color: #ffffff;
+      border: 1px solid #ddd6c2;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      display: block;
+      margin: auto;
+    }
+
+    /* Style de la tooltip (infobulle) */
+    .tooltip {
+      position: absolute;
+      background-color: #fffefc;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      padding: 10px 14px;
+      font-size: 14px;
+      pointer-events: none;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+
+    /* Conteneur de la légende */
+    .legend {
+      flex-shrink: 0;
+      width: 270px;
+      margin-top: 260px;
+    }
+
+    /* Titre de la légende */
+    .legend-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 8px;
+      text-align: left;
+    }
+
+    /* Grille des éléments de légende */
+    .legend-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4px 8px;
+      background-color: #fafafa;
+      border: 1px solid #e0e0e0;
+      border-radius: 4px;
+      padding: 10px;
+    }
+
+    /* Chaque item de la légende */
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 11px;
+      padding: 1px 2px;
+      border-radius: 2px;
+    }
+
+    /* Pastille de couleur dans la légende */
+    .legend-color {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 1px solid #999;
+      flex-shrink: 0;
+    }
+
+    /* Style des étiquettes des axes dans le graphique */
+    .axis-label {
+      font-family: 'Playfair Display', serif;
+      font-size: 14px;
+      fill: #333;
+    }
+
+    /* Style des statistiques récapitulatives */
+    .summary-stats {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+      color: #666;
+      font-style: italic;
+    }
+
+  </style>
+</head>
+
+<!-- Structure de la page -->
+<body>
+
+  <!-- Titre principal -->
+  <h1>Production par année et par aire géographique</h1>
+
+  <!-- Paragraphe explicatif -->
+  <div class="histogram-description">
+    <p>Cet histogramme montre la <strong>production des œuvres</strong> du corpus selon leur <strong>année médiane</strong> et leur <strong>origine géographique</strong>.</p>
+    <p>Les barres sont segmentées par région. Vous pouvez <strong>filtrer</strong> les données par région ou inclure/exclure les <strong>provenances incertaines</strong>.</p>
+    <p>Survolez un segment pour afficher le détail (région, année, quantité).</p>
+  </div>
+
+  <!-- Conteneur des contrôles (filtres, boutons) -->
+  <div class="controls-container">
+
+    <!-- Bouton "Inclure les oeuvres à provenance incertaine" -->
+    <div class="uncertainty-filter">
+      <label>
+        <input type="checkbox" id="uncertainty-toggle" checked>
+        Inclure les œuvres à provenance incertaine
+      </label>
+    </div>
+
+    <!-- Titre du filtre par aire géographique -->
+    <div class="region-filters-header">
+      <h3 class="region-filters-title">Filtres par aire géographique</h3>
+
+      <!-- Bouton "Tout désélectionner" -->
+      <button class="toggle-button" id="toggle-all">Tout désélectionner</button>
+    </div>
+    
+    <!-- Filtre par aire géographique -->
+    <div class="region-filters" id="region-filters"></div>
+    
+     <!-- Zone vide pour afficher des statistiques résumées -->
+    <div class="summary-stats" id="summary-stats"></div>
+  </div>
+
+  <!-- Conteneur principal pour graphique + légende -->
+  <div class="chart-container">
+    <!-- Conteneur du graphique -->
+    <div class="chart-wrapper">
+      <div id="chart"></div>
+    </div>
+
+    <!-- Bloc pour la légende -->
+    <div class="legend">
+      <div class="legend-title">Légende des aires géographiques</div>
+      <div class="legend-grid" id="legend"></div>
+    </div>
+  </div>
+
+  <!-- Note au bas de la page -->
+  <div class="note">
+    <p><strong>Note</strong> : La faible représentation de l'Asie et du Japon s'explique par le périmètre européen du projet. Ces régions apparaissent donc marginalement, sans que cela reflète leur production réelle.</p>
+  </div>
+
+  <!-- Bouton PDF -->
+  <div style="text-align: center; margin-bottom: 20px;">
+    <button id="download-pdf" class="toggle-button">Télécharger en PDF</button>
+  </div>
+
+  
+  <!-- Infobulle destinée à afficher des informations -->
+  <div class="tooltip" id="tooltip"></div>
+
+  <script>
+
+    // Définition des marges et dimensions internes du graphique
+    const margin = { top: 40, right: 20, bottom: 60, left: 70 },
+          width = 1200 - margin.left - margin.right,
+          height = 500 - margin.top - margin.bottom;
+
+    // Création du SVG et ajout d'un groupe <g> décalé pour respecter les marges
+    const svg = d3.select("#chart")
+      .append("svg")
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+
+    // Sélection de l'élément tooltip (infobulle)
+    const tooltip = d3.select("#tooltip");
+
+    // Palette de couleurs personnalisée pour les régions
+    const customColors = 
+
+      ["#ffe700",
+      "#9bbcfd",
+      "#b35700",
+      "#6f0000",
+      "#4a628c",
+      "#b30d01",
+      "#f43519",
+      "#ffca3f",
+      "#c68600",
+      "#704e20",
+      "#dcac3a",
+      "#a2793a"]
+
+    // Déclaration des variables globales
+    let allRegions, colorScale, x, y, stackedData, allYears, rawData;
+    const toggleBtn = document.getElementById("toggle-all");
+
+    // Chargement des données CSV (séparateur ;)
+    d3.dsv(";", "histogramme.csv").then(data => {
+      rawData = data;
+
+      // Extraction et tri des régions uniques (en supprimant les vides)
+      allRegions = Array.from(new Set(data.map(d => d["aorum:spatialharmonise"]?.trim())))
+        .filter(Boolean)
+        .sort();
+
+      // Création des échelles pour l'axe X (bandes) et Y (linéaire)
+      x = d3.scaleBand().range([0, width]).padding(0.1);
+      y = d3.scaleLinear().range([height, 0]);
+
+      // Échelle de couleurs selon les régions
+      colorScale = d3.scaleOrdinal().domain(allRegions).range(customColors);
+
+      // Création dynamique des filtres de régions
+      const regionFilters = d3.select("#region-filters");
+
+      allRegions.forEach(region => {
+        const label = regionFilters.append("label").attr("class", "filter-item");
+        label.append("input")
+          .attr("type", "checkbox")
+          .attr("value", region)
+          .property("checked", true)
+          .on("change", updateChart);
+        label.append("div")
+          .attr("class", "region-color")
+          .style("background-color", colorScale(region));
+        label.append("span").text(region);
+      });
+
+      // Gestion du bouton "Tout (dés)sélectionner"
+      toggleBtn.addEventListener("click", () => {
+        const checkboxes = document.querySelectorAll("#region-filters input[type=checkbox]");
+        const allChecked = Array.from(checkboxes).every(cb => cb.checked);
+        checkboxes.forEach(cb => cb.checked = !allChecked);
+        toggleBtn.textContent = allChecked ? "Tout sélectionner" : "Tout désélectionner";
+        updateChart();
+      });
+
+      // Création des groupes d'axes
+      svg.append("g").attr("class", "x-axis").attr("transform", `translate(0,${height})`);
+      svg.append("g").attr("class", "y-axis");
+
+      // Libellé de l'axe X
+      svg.append("text")
+        .attr("x", width / 2)
+        .attr("y", height + 50)
+        .attr("text-anchor", "middle")
+        .attr("class", "axis-label")
+        .text("Année médiane");
+
+      // Libellé de l'axe Y
+      svg.append("text")
+        .attr("transform", "rotate(-90)")
+        .attr("x", -height / 2)
+        .attr("y", -50)
+        .attr("text-anchor", "middle")
+        .attr("class", "axis-label")
+        .text("Nombre d'œuvres");
+
+      // Listener pour inclure/exclure les provenances incertaines
+      document.getElementById("uncertainty-toggle").addEventListener("change", updateChart);
+
+      // Appel initial pour construire le graphique
+      updateChart();
+    });
+
+    // Fonction : Met à jour la légende en fonction des régions visibles
+    function updateLegend(selectedRegions) {
+      const legend = d3.select("#legend");
+      
+      // Supprimer tous les éléments existants
+      legend.selectAll(".legend-item").remove();
+      
+      // Ajouter seulement les régions sélectionnées
+      selectedRegions.forEach(region => {
+        const item = legend.append("div").attr("class", "legend-item");
+        item.append("div")
+          .attr("class", "legend-color")
+          .style("background-color", colorScale(region));
+        item.append("span").text(region);
+      });
+      
+      const legendContainer = d3.select(".legend");
+      legendContainer.style("display", selectedRegions.length === 0 ? "none" : "block");
+    }
+
+    // Fonction : Prépare les données empilées selon incertitude + région
+    function buildStackedData(includeUncertain) {
+      const grouped = {};
+
+      rawData.forEach(d => {
+        const incertitude = d["aorum:spatialincertitude"]?.trim();
+        if (!includeUncertain && incertitude === "1") return;
+
+        const id = d["dcterms:identifier"];
+        const region = d["aorum:spatialharmonise"]?.trim();
+        const dateRange = d["aorum:dateHidden"];
+        if (!id || !region || !dateRange) return;
+
+        // Extraction des années (peut être une ou deux)
+        const years = dateRange.match(/\d{4}/g)?.map(Number);
+        if (!years || years.length === 0) return;
+
+        // Calcul de l'année médiane
+        const median = years.length === 1
+          ? years[0]
+          : Math.round((Math.min(...years) + Math.max(...years)) / 2);
+
+        const century = Math.floor((median - 1) / 100) + 1;
+
+        if (!grouped[median]) grouped[median] = { _century: century };
+        if (!grouped[median][region]) grouped[median][region] = 0;
+
+        grouped[median][region]++;
+      });
+
+      const years = Object.keys(grouped).map(Number).sort((a, b) => a - b);
+      allYears = years;
+
+      // Retourne les données formatées pour D3.stack
+      return years.map(year => {
+        const entry = { year: year, _century: grouped[year]._century };
+        allRegions.forEach(region => {
+          entry[region] = grouped[year][region] || 0;
+        });
+        return entry;
+      });
+    }
+
+    // Fonction : Met à jour le graphique en fonction des filtres actifs
+    function updateChart() {
+      const selectedRegions = Array.from(document.querySelectorAll("#region-filters input[type=checkbox]"))
+        .filter(d => d.checked)
+        .map(d => d.value);
+
+      const includeUncertain = document.getElementById("uncertainty-toggle").checked;
+      const filteredData = buildStackedData(includeUncertain);
+
+      // Statistiques globales affichées en haut
+      const totalWorks = filteredData.reduce((sum, d) => sum + d3.sum(selectedRegions, r => d[r]), 0);
+      const yearRange = d3.extent(allYears);
+      document.getElementById("summary-stats").textContent = 
+        `${selectedRegions.length} région${selectedRegions.length > 1 ? 's' : ''} sélectionnée${selectedRegions.length > 1 ? 's' : ''} • ${totalWorks} œuvres • Période : ${yearRange[0]}-${yearRange[1]}`;
+
+      // Mise à jour de la légende pour ne montrer que les régions sélectionnées
+      updateLegend(selectedRegions);
+
+      // Supprime les anciennes couches
+      svg.selectAll(".layer").remove();
+
+      // Redéfinit les domaines des échelles 
+      x.domain(allYears);
+      y.domain([0, d3.max(filteredData, d => d3.sum(selectedRegions, r => d[r]))]).nice();
+
+      // Ticks décennaux sur l'axe des X
+      const decadeTicks = allYears.filter((d, i, arr) => d % 10 === 0 && (i === 0 || arr[i - 1] !== d - 10));
+
+      svg.select(".x-axis").call(d3.axisBottom(x).tickValues(decadeTicks).tickFormat(d => `${d}`));
+      // Générer des ticks entiers uniques
+      let tickValues = y.ticks().filter(d => Number.isInteger(d));
+
+      // Supprimer les doublons visuellement proches (ex : plusieurs "0" ou "1")
+      tickValues = [...new Set(tickValues.map(d => Math.round(d)))];
+
+      svg.select(".y-axis").call(
+        d3.axisLeft(y)
+          .tickValues(tickValues)
+          .tickFormat(d3.format("d")) // Affichage entier
+      );
+
+
+      // Création de la pile avec les régions sélectionnées
+      const stack = d3.stack().keys(selectedRegions);
+      const layers = stack(filteredData);
+
+      // Création des groupes de barres empilées
+      svg.selectAll("g.layer")
+        .data(layers)
+        .enter().append("g")
+        .attr("class", "layer")
+        .attr("fill", d => colorScale(d.key))
+        .selectAll("rect")
+        .data(d => d.map(e => ({ ...e, key: d.key })))
+        .enter().append("rect")
+        .attr("x", d => x(d.data.year))
+        .attr("y", d => y(d[1]))
+        .attr("height", d => y(d[0]) - y(d[1]))
+        .attr("width", x.bandwidth())
+
+        // Interactions au survol
+        .on("mouseover", function(event, d) {
+          d3.select(this)
+            .transition().duration(150)
+            .attr("width", x.bandwidth() + 4)
+            .attr("x", x(d.data.year) - 2);
+
+          tooltip.transition().style("opacity", 1);
+          tooltip.html(`<strong>${d.key}</strong><br>Année ${d.data.year} : ${d.data[d.key]} œuvre${d.data[d.key] > 1 ? 's' : ''}`)
+            .style("left", (event.pageX + 15) + "px")
+            .style("top", (event.pageY - 30) + "px");
+        })
+
+        .on("mouseout", function(event, d) {
+          d3.select(this)
+            .transition().duration(150)
+            .attr("width", x.bandwidth())
+            .attr("x", x(d.data.year));
+
+          tooltip.transition().style("opacity", 0);
+        });
+    }
+
+    // Export en PDF
+    document.getElementById("download-pdf").addEventListener("click", async () => {
+      const { jsPDF } = window.jspdf;
+
+      const includeUncertain = document.getElementById("uncertainty-toggle").checked;
+      const provenanceText = includeUncertain
+        ? "Provenances incertaines : incluses"
+        : "Provenances incertaines : non incluses";
+
+      const today = new Date();
+      const formattedDate = today.toLocaleDateString("fr-FR", {
+        day: '2-digit',
+        month: 'long',
+        year: 'numeric'
+      });
+
+      const chartArea = document.querySelector(".chart-container");
+      const legendArea = document.getElementById("legend");
+
+      const exportContainer = document.createElement("div");
+      exportContainer.style.background = "#fff";
+      exportContainer.style.padding = "20px";
+      exportContainer.style.fontFamily = "Playfair Display, serif";
+      exportContainer.style.color = "#000";
+      exportContainer.style.maxWidth = "1400px";
+      exportContainer.style.margin = "0 auto";
+
+      // Titre principal
+      const title = document.createElement("h1");
+      title.textContent = "Production des œuvres par année médiane";
+      title.style.fontSize = "24px";
+      title.style.marginBottom = "10px";
+      title.style.textAlign = "center";
+
+      // Description
+      const descriptionBlock = document.createElement("div");
+      descriptionBlock.style.fontSize = "14px";
+      descriptionBlock.style.marginBottom = "20px";
+      descriptionBlock.style.lineHeight = "1.6";
+      descriptionBlock.innerHTML = `
+        <p><strong>Export PDF – ${formattedDate}</strong></p>
+        <p>Cet histogramme montre la <strong>production des œuvres</strong> du corpus selon leur <strong>année médiane</strong> et leur <strong>origine géographique</strong>. Les barres sont segmentées par région.</p>
+        <p>${provenanceText}</p>
+      `;
+
+      // Cloner uniquement la partie graphique (pas toute la chart-container)
+      const chartWrapper = document.querySelector(".chart-wrapper");
+      const chartClone = chartWrapper.cloneNode(true);
+      
+      // S'assurer que le clone a la bonne largeur
+      chartClone.style.width = "100%";
+      chartClone.style.maxWidth = "1200px";
+      chartClone.style.margin = "0 auto";
+      
+      // Le SVG à l'intérieur doit aussi garder sa taille
+      const svgInClone = chartClone.querySelector("svg");
+      if (svgInClone) {
+        svgInClone.style.width = "100%";
+        svgInClone.style.height = "auto";
+        svgInClone.style.maxWidth = "none";
+      }
+      
+      // Créer un conteneur pour le graphique
+      const chartContainer = document.createElement("div");
+      chartContainer.style.marginBottom = "30px";
+      chartContainer.style.width = "100%";
+      chartContainer.appendChild(chartClone);
+
+      // Ajout dans l'ordre : titre, description, puis graphique centré
+      exportContainer.appendChild(title);
+      exportContainer.appendChild(descriptionBlock);
+      exportContainer.appendChild(chartContainer);
+
+      // Ajouter le titre de légende et la légende en dessous du graphique
+      if (legendArea) {
+        const legendTitle = document.createElement("h2");
+        legendTitle.textContent = "Légende des aires géographiques";
+        legendTitle.style.fontSize = "18px";
+        legendTitle.style.fontFamily = "Playfair Display, serif";
+        legendTitle.style.fontWeight = "600";
+        legendTitle.style.margin = "20px 0 10px 0";
+        legendTitle.style.textAlign = "center";
+
+        const legendClone = legendArea.cloneNode(true);
+        legendClone.style.marginBottom = "20px";
+        legendClone.style.maxWidth = "600px";
+        legendClone.style.margin = "0 auto 20px auto";
+
+        exportContainer.appendChild(legendTitle);
+        exportContainer.appendChild(legendClone);
+      }
+
+      // Ajouter temporairement à la page pour la capture
+      document.body.appendChild(exportContainer);
+      window.scrollTo(0, 0);
+
+      // Capturer avec html2canvas
+      const canvas = await html2canvas(exportContainer, {
+        scale: 2,
+        backgroundColor: "#fff",
+        useCORS: true,
+        allowTaint: false
+      });
+
+      const imgData = canvas.toDataURL("image/png");
+
+      // Créer le PDF
+      const pdf = new jsPDF({
+        orientation: "landscape",
+        unit: "mm",
+        format: "a4"
+      });
+
+      const pageWidth = pdf.internal.pageSize.getWidth();
+      const pageHeight = pdf.internal.pageSize.getHeight();
+      const imgWidth = pageWidth - 20; // Marges de 10mm de chaque côté
+      const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+      // Vérifier si l'image dépasse la hauteur de la page
+      if (imgHeight > pageHeight - 20) {
+        const scaleFactor = (pageHeight - 20) / imgHeight;
+        const finalWidth = imgWidth * scaleFactor;
+        const finalHeight = imgHeight * scaleFactor;
+        const xOffset = (pageWidth - finalWidth) / 2; // Centrer horizontalement
+        
+        pdf.addImage(imgData, "PNG", xOffset, 10, finalWidth, finalHeight);
+      } else {
+        pdf.addImage(imgData, "PNG", 10, 10, imgWidth, imgHeight);
+      }
+
+      pdf.save("production_par_année.pdf");
+
+      // Nettoyer en supprimant l'élément temporaire
+      document.body.removeChild(exportContainer);
+    });
+
+    </script>
+  
+</body>
+</html>

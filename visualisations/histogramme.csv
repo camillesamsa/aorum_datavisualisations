@@ -1,0 +1,604 @@
+"dcterms:identifier";"dcterms:spatial";"aorum:dateHidden";"aorum:spatialharmonise";"aorum:spatialincertitude"
+"PBE1620FF2Lou01";"Pays-Bas espagnols (XVIIᵉ s)";"1610/1630";"Pays-Bas espagnols (XVIIᵉ s)";0
+"PBE1630JB2Bes01";"Pays-Bas espagnols (XVIIᵉ s)";"1620/1640";"Pays-Bas espagnols (XVIIᵉ s)";0
+"SEm1516AAlBud01";"Pays germaniques";"1516/1518";"Pays germaniques";0
+"PBa1516JvCLou01";"Pays-Bas (XVIᵉ s)";"1516/1518";"Pays-Bas (XVIᵉ s)";0
+"SEm1500MSBNG01";"Pays germaniques";"1475/1510";"Pays germaniques";0
+"SEm1505MSBNG02";"Pays germaniques";"1500/1520";"Pays germaniques";0
+"Ang1528HolJLou01";"Angleterre";"1528/1528";"Angleterre";0
+"Ang1528HolJLou02";"Angleterre";"1528/1528";"Angleterre";0
+"Fra1530AnoBvSE01";"Royaume de France";"1520/1540";"Royaume de France";0
+"Fra1510AnoBvSE01";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1510AnoBvSE02";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1510AnoBvSE03";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1510AnoBvSE04";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1550AnoArras";"Royaume de France";"1525/1575";"Royaume de France";0
+"Fra1490BeugMMB";"Royaume de France";"1480/1525";"Royaume de France";0
+"PBa1501BosPra";"Pays-Bas (XVIᵉ s)";"1501/1505";"Pays-Bas (XVIᵉ s)";0
+"SEm1512MSBatNG";"Pays germaniques";"1511/1513";"Pays germaniques";0
+"SEm1506LCaNG01";"Pays germaniques";"1506/1506";"Pays germaniques";0
+"SEm1506LCaNG02";"Pays germaniques";"1506/1506";"Pays germaniques";0
+"SEm1530AnoNG01";"Pays germaniques";"1520/1550";"Pays germaniques";0
+"PBa1506QMetNG01";"Pays-Bas (XVIᵉ s)";"1506/1509";"Pays-Bas (XVIᵉ s)";0
+"PBa1510QMetNG01";"Pays-Bas (XVIᵉ s)";"1510/1530";"Pays-Bas (XVIᵉ s)";0
+"PBa1510QMetNG02";"Pays-Bas (XVIᵉ s)";"1510/1530";"Pays-Bas (XVIᵉ s)";0
+"PBa1515GDNG01";"Pays-Bas (XVIᵉ s)";"1510/1520";"Pays-Bas (XVIᵉ s)";0
+"PBa1515GDNG02";"Pays-Bas (XVIᵉ s)";"1515/1523";"Pays-Bas (XVIᵉ s)";0
+"SEm1525HWertNG01";"Pays germaniques";"1520/1530";"Pays germaniques";0
+"Ang1533HHJNG";"Angleterre";"1533/1533";"Angleterre";0
+"SEm1529BaegNG01";"Pays germaniques";"1510/1530";"Pays germaniques";0
+"SEm1529BaegNG02";"Pays germaniques";"1510/1530";"Pays germaniques";0
+"SEm1514HBGNG01";"Pays germaniques";"1514/1514";"Pays germaniques";0
+"SEm1512HBGNG02";"Pays germaniques";"1512/1512";"Pays germaniques";0
+"PBa1520JMNG";"Pays-Bas (XVIᵉ s)";"1510/1530";"Pays-Bas (XVIᵉ s)";0
+"PBa1520JBellNG";"Pays-Bas (XVIᵉ s)";"1510/1530";"Pays-Bas (XVIᵉ s)";0
+"PBa1550MFPNG";"Pays-Bas (XVIᵉ s)";"1525/1575";"Pays-Bas (XVIᵉ s)";0
+"Ita1501AmBNG01";"Péninsule italienne";"1500/1502";"Péninsule italienne";0
+"Ita1501AmBNG02";"Péninsule italienne";"1500/1502";"Péninsule italienne";0
+"Ita1500SBottNG";"Péninsule italienne";"1500/1500";"Péninsule italienne";0
+"Ita1500BottNG01";"Péninsule italienne";"1475/1525";"Péninsule italienne";0
+"Ita1500BottNG02";"Péninsule italienne";"1475/1525";"Péninsule italienne";0
+"Ita1500AMaNG01";"Péninsule italienne";"1480/1510";"Péninsule italienne";0
+"Ita1500AMaNG02";"Péninsule italienne";"1490/1507";"Péninsule italienne";0
+"Ita1500AMaNG03";"Péninsule italienne";"1490/1507";"Péninsule italienne";0
+"Ita1502LCoetcollNG";"Péninsule italienne";"1497/1503";"Péninsule italienne";0
+"Ita1500VFoNG";"Péninsule italienne";"1475/1525";"Péninsule italienne";0
+"Ita1500NPiNG01";"Péninsule italienne";"1475/1504";"Péninsule italienne";0
+"Ita1500NPiNG02";"Péninsule italienne";"1475/1504";"Péninsule italienne";0
+"Ita1510BFuNG";"Péninsule italienne";"1490/1520";"Péninsule italienne";0
+"Ita1515AnoNordNG01";"Péninsule italienne";"1510/1520";"Péninsule italienne";0
+"Ita1540GFerrNG01";"Péninsule italienne";"1530/1550";"Péninsule italienne";0
+"Ita1522LMaNG01";"Péninsule italienne";"1521/1525";"Péninsule italienne";0
+"Fra1500NBeParESG";"Royaume de France";"1510/1530";"Royaume de France";0
+"PBa1554FFloKSMKA";"Pays-Bas (XVIᵉ s)";"1554/1554";"Pays-Bas (XVIᵉ s)";0
+"PBa1525JCVLou";"Pays-Bas (XVIᵉ s)";"1525/1530";"Pays-Bas (XVIᵉ s)";0
+"PBa1525BvOBoij";"Pays-Bas (XVIᵉ s)";"1520/1530";"Pays-Bas (XVIᵉ s)";0
+"PBa1520BvOCPAS";"Pays-Bas (XVIᵉ s)";"1520/1520";"Pays-Bas (XVIᵉ s)";0
+"PBa1521MSMiNYHD";"Pays-Bas (XVIᵉ s)";"1521/1599";"Pays-Bas (XVIᵉ s)";0
+"PBa1527JGoMuAPi";"Pays-Bas (XVIᵉ s)";"1527/1527";"Pays-Bas (XVIᵉ s)";0
+"PBa1500DJaLou";"Pays-Bas (XVIᵉ s)";"1507/1550";"Pays-Bas (XVIᵉ s)";0
+"PBa1530SBeLou";"Pays-Bas (XVIᵉ s)";"1520/1550";"Pays-Bas (XVIᵉ s)";0
+"PBa1517JGoLou";"Pays-Bas (XVIᵉ s)";"1517/1517";"Pays-Bas (XVIᵉ s)";0
+"PBa1515JBeerNG01";"Pays-Bas (XVIᵉ s)";"1510/1530";"Pays-Bas (XVIᵉ s)";0
+"Ita1520LMaNG02";"Péninsule italienne";"1510/1530";"Péninsule italienne";0
+"Ita1514LMaNG03";"Péninsule italienne";"1513/1517";"Péninsule italienne";0
+"Ita1506LMaNG04";"Péninsule italienne";"1505/1508";"Péninsule italienne";0
+"Ita1522LMaNG05";"Péninsule italienne";"1522/1522";"Péninsule italienne";0
+"Ita1535GPaNG01";"Péninsule italienne";"1530/1550";"Péninsule italienne";0
+"Ita1540MoNG01";"Péninsule italienne";"1530/1550";"Péninsule italienne";0
+"Ita1550ASchNG01";"Péninsule italienne";"1525/1575";"Péninsule italienne";0
+"Ita1502RaphNG01";"Péninsule italienne";"1501/1504";"Péninsule italienne";0
+"Ita1505RaphNG02";"Péninsule italienne";"1505/1505";"Péninsule italienne";0
+"Ita1507RaphNG03";"Péninsule italienne";"1506/1508";"Péninsule italienne";0
+"Ita1512BLoNG01";"Péninsule italienne";"1512/1512";"Péninsule italienne";0
+"Ita1538GCarpiNG01";"Péninsule italienne";"1537/1549";"Péninsule italienne";0
+"Ita1520BacchNG";"Péninsule italienne";"1510/1540";"Péninsule italienne";0
+"Ita1507MarzNG01";"Péninsule italienne";"1507/1507";"Péninsule italienne";0
+"Ita1500MarzNG02";"Péninsule italienne";"1500/1500";"Péninsule italienne";0
+"SEm1520AWoeMuAPi01";"Pays germaniques";"1520/1520";"Pays germaniques";0
+"SEm1520AWoeMuAPi02";"Pays germaniques";"1520/1520";"Pays germaniques";0
+"SEm1526HWertMuAPi01";"Pays germaniques";"1526/1526";"Pays germaniques";0
+"SEm1526HWertMuAPi02";"Pays germaniques";"1526/1526";"Pays germaniques";0
+"PBE1598JB1NG";"Pays-Bas espagnols (XVIIᵉ s)";"1598/1598";"Pays-Bas espagnols (XVIIᵉ s)";0
+"PBE1620AnoNG";"Pays-Bas espagnols (XVIIᵉ s)";"1610/1630";"Pays-Bas espagnols (XVIIᵉ s)";0
+"SEm1615KroGNM01";"Pays germaniques";"1615/1615";"Pays germaniques";0
+"SEm1530BruyGNM";"Pays germaniques";"1520/1540";"Pays germaniques";0
+"SEm1549HBeGNM";"Pays germaniques";"1549/1549";"Pays germaniques";0
+"SEm1525HPlaGNM";"Pays germaniques";"1525/1525";"Pays germaniques";0
+"SEm1512MSchMuAPi";"Pays germaniques";"1511/1515";"Pays germaniques";0
+"SEm1535BBeGNM";"Pays germaniques";"1535/1535";"Pays germaniques";0
+"PBa1500GDatLyonMBA01";"Pays-Bas (XVIᵉ s)";"1475/1525";"Pays-Bas (XVIᵉ s)";0
+"Ita1500BMoLyonMBA";"Péninsule italienne";"1475/1525";"Péninsule italienne";0
+"Ita1505PerLyonMBA";"Péninsule italienne";"1500/1510";"Péninsule italienne";0
+"Fra1520AnoLyonMBA01";"Royaume de France";"1510/1530";"Royaume de France";0
+"Fra1505MMahLyonMBA01";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1505MMahLyonMBA02";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1505MMahLyonMBA03";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1505MMahLyonMBA04";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1505MMahLyonMBA05";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1505MMahLyonMBA06";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1505MMahLyonMBA07";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1505MMahLyonMBA08";"Royaume de France";"1500/1520";"Royaume de France";0
+"Fra1507ClGLyonMBA";"Royaume de France";"1507/1507";"Royaume de France";0
+"Esp1500MSCPaLyonMBA01";"Espagne";"1475/1525";"Espagne";0
+"Esp1500MSCPaLyonMBA02";"Espagne";"1475/1525";"Espagne";0
+"Fra1623JStLyonMBA";"Royaume de France";"1622/1635";"Royaume de France";0
+"SEm1500AnoChMBA01";"Pays germaniques";"1500/1600";"Pays germaniques";0
+"Ita1500AnoChMBA02";"Péninsule italienne";"1475/1525";"Péninsule italienne";0
+"Ita1500AnoChMBA03";"Péninsule italienne";"1500/1600";"Péninsule italienne";0
+"Esp1530MRSJChMBA01";"Espagne";"1520/1540";"Espagne";0
+"Esp1530MRSJChMBA02";"Espagne";"1520/1540";"Espagne";0
+"Fra1637AnoGui";"Royaume de France";"1637/1637";"Royaume de France";0
+"PBa1515JvCMuAPi";"Pays-Bas (XVIᵉ s)";"1510/1524";"Pays-Bas (XVIᵉ s)";0
+"PBa1557AnoPhiMA";"Pays-Bas (XVIᵉ s)";"1557/1599";"Pays-Bas (XVIᵉ s)";0
+"Ita1590FariVerCas";"Péninsule italienne";"1590/1600";"Péninsule italienne";0
+"PU1629RembMH";"Provinces-Unies";"1628/1640";"Provinces-Unies";0
+"PU1656VermMET";"Provinces-Unies";"1655/1658";"Provinces-Unies";0
+"PU1657vMierKHM";"Provinces-Unies";"1657/1657";"Provinces-Unies";0
+"PU1650SchelGuim";"Provinces-Unies";"1625/1675";"Provinces-Unies";0
+"PU165XSchelV&A";"Provinces-Unies";"1625/1675";"Provinces-Unies";0
+"PU1641SaenRijks";"Provinces-Unies";"1641/1641";"Provinces-Unies";0
+"Ita1500ARomSMSM";"Péninsule italienne";"1500/1500";"Péninsule italienne";0
+"Ita1505SGattiAQMNaz";"Péninsule italienne";"1505/1510";"Péninsule italienne";0
+"Ita1511MAqRietiMC";"Péninsule italienne";"1511/1511";"Péninsule italienne";0
+"Ita1508AnoRMSJeanLatran";"Péninsule italienne";"1507/1509";"Péninsule italienne";0
+"Ita1537BecLou01";"Péninsule italienne";"1537/1537";"Péninsule italienne";0
+"Ita1537BecLou02";"Péninsule italienne";"1537/1537";"Péninsule italienne";0
+"Ita1460AnoLou";"Péninsule italienne";"1450/1500";"Péninsule italienne";0
+"Ita1524CaroLou";"Péninsule italienne";"1524/1530";"Péninsule italienne";0
+"Ita1494BZeLou01";"Péninsule italienne";"1494/1494";"Péninsule italienne";0
+"Ita1536GRoLou01";"Péninsule italienne";"1535/1538";"Péninsule italienne";0
+"Ita1517PontLou";"Péninsule italienne";"1516/1519";"Péninsule italienne";0
+"Ita1569ACaLou";"Péninsule italienne";"1569/1569";"Péninsule italienne";0
+"Ita1516SaccLou";"Péninsule italienne";"1516/1516";"Péninsule italienne";0
+"Ita1525GCalLou";"Péninsule italienne";"1520/1546";"Péninsule italienne";0
+"Ita1506LCoLou";"Péninsule italienne";"1506/1512";"Péninsule italienne";0
+"Ita1518AdSLou01";"Péninsule italienne";"1518/1519";"Péninsule italienne";0
+"Ita1503RaphLou01";"Péninsule italienne";"1502/1510";"Péninsule italienne";0
+"Ita1475PerLou01";"Péninsule italienne";"1490/1500";"Péninsule italienne";0
+"Ita1500BoltLou";"Péninsule italienne";"1500/1500";"Péninsule italienne";0
+"Ita1580AnoLou01";"Péninsule italienne";"1550/1600";"Péninsule italienne";0
+"Ita1500BPeLou";"Péninsule italienne";"1475/1537";"Péninsule italienne";0
+"Ita1500BLuLou01";"Péninsule italienne";"1475/1530";"Péninsule italienne";0
+"Ita1670CDoLou01";"Péninsule italienne";"1670/1690";"Péninsule italienne";0
+"Ita1653CDoLou 02";"Péninsule italienne";"1652/1660";"Péninsule italienne";0
+"Ita1540PBoLou";"Péninsule italienne";"1540/1540";"Péninsule italienne";0
+"Ita1525GSavLou";"Péninsule italienne";"1520/1530";"Péninsule italienne";0
+"Ita1588TintoLou";"Péninsule italienne";"1587/1589";"Péninsule italienne";0
+"Ita1575JBaLou";"Péninsule italienne";"1570/1600";"Péninsule italienne";0
+"Ita1555VeroLou";"Péninsule italienne";"1558/1560";"Péninsule italienne";0
+"Ita1450PdCLou";"Péninsule italienne";"1480/1525";"Péninsule italienne";0
+"Ita1475PerLou02";"Péninsule italienne";"1482/1484";"Péninsule italienne";0
+"Ita1480LdCLou01";"Péninsule italienne";"1470/1525";"Péninsule italienne";0
+"Ita1507RaphLou02";"Péninsule italienne";"1506/1509";"Péninsule italienne";0
+"Ita1500MdOLou";"Péninsule italienne";"1475/1550";"Péninsule italienne";0
+"Ita1500OrtLou";"Péninsule italienne";"1475/1530";"Péninsule italienne";0
+"Ita1600AnoLou02";"Péninsule italienne";"1575/1675";"Péninsule italienne";0
+"Ita1481AMaLou01";"Péninsule italienne";"1477/1490";"Péninsule italienne";0
+"Ita1456AMaLou02";"Péninsule italienne";"1456/1459";"Péninsule italienne";0
+"Ita1475BdGLou01";"Péninsule italienne";"1480/1501";"Péninsule italienne";0
+"Ita1495AMaLou03";"Péninsule italienne";"1495/1496";"Péninsule italienne";0
+"Ita1500AMaLou04";"Péninsule italienne";"1499/1502";"Péninsule italienne";0
+"Ita1496AMaLou05";"Péninsule italienne";"1496/1497";"Péninsule italienne";0
+"Ita1500BATLou01";"Péninsule italienne";"1475/1502";"Péninsule italienne";0
+"Ita1475BdGLou02";"Péninsule italienne";"1480/1501";"Péninsule italienne";0
+"Ita1475FnoLiLou01";"Péninsule italienne";"1470/1480";"Péninsule italienne";0
+"Ita1475FnoLiLou02";"Péninsule italienne";"1460/1490";"Péninsule italienne";0
+"Ita1475LdVLou";"Péninsule italienne";"1460/1480";"Péninsule italienne";0
+"Ita1475SodLou";"Péninsule italienne";"1507/1509";"Péninsule italienne";0
+"Ita1450BdPLou";"Péninsule italienne";"1425/1480";"Péninsule italienne";0
+"Ita1507ASolLou01";"Péninsule italienne";"1506/1520";"Péninsule italienne";0
+"Ita1509ASolLou02";"Péninsule italienne";"1508/1510";"Péninsule italienne";0
+"Ita1516RaphLou04";"Péninsule italienne";"1515/1519";"Péninsule italienne";0
+"Ita1516RaphLou05";"Péninsule italienne";"1515/1517";"Péninsule italienne";0
+"Ita1501RaphLou06";"Péninsule italienne";"1501/1501";"Péninsule italienne";0
+"Ita1515AdSLou02";"Péninsule italienne";"1510/1517";"Péninsule italienne";0
+"Ita1502PerLou03";"Péninsule italienne";"1503/1505";"Péninsule italienne";0
+"Ita1506LoSpLou";"Péninsule italienne";"1505/1520";"Péninsule italienne";0
+"Ita1500LMaLou";"Péninsule italienne";"1475/1528";"Péninsule italienne";0
+"Ita1500GaroLou01";"Péninsule italienne";"1475/1575";"Péninsule italienne";0
+"Ita1475GdBLou";"Péninsule italienne";"1470/1530";"Péninsule italienne";0
+"Ita1506MAlbLou";"Péninsule italienne";"1506/1506";"Péninsule italienne";0
+"Ita1475BZeLou02";"Péninsule italienne";"1511/1513";"Péninsule italienne";0
+"Ita1475PerLou04";"Péninsule italienne";"1480/1493";"Péninsule italienne";0
+"Ita1475PerLou05";"Péninsule italienne";"1490/1500";"Péninsule italienne";0
+"Ita1500FMaLou";"Péninsule italienne";"1475/1505";"Péninsule italienne";0
+"Ita1475AmBLou01";"Péninsule italienne";"1470/1523";"Péninsule italienne";0
+"Ita1475AmBLou02";"Péninsule italienne";"1470/1523";"Péninsule italienne";0
+"Ita1475AmBLou03";"Péninsule italienne";"1470/1525";"Péninsule italienne";0
+"Ita1490CBraLouA";"Péninsule italienne";"1480/1501";"Péninsule italienne";0
+"Ita1490CBraLouC";"Péninsule italienne";"1480/1501";"Péninsule italienne";0
+"Ita1490CBraLouB";"Péninsule italienne";"1480/1501";"Péninsule italienne";0
+"Ita1450GBelLou01";"Péninsule italienne";"1465/1470";"Péninsule italienne";0
+"Ita1450GBelLou02";"Péninsule italienne";"1464/1470";"Péninsule italienne";0
+"Ita1450AnoLou03";"Péninsule italienne";"1425/1480";"Péninsule italienne";0
+"Ita1450AnoLou04";"Péninsule italienne";"1425/1480";"Péninsule italienne";0
+"Ita1494LdCLou02";"Péninsule italienne";"1494/1494";"Péninsule italienne";0
+"Ita1500AnoLou05";"Péninsule italienne";"1475/1550";"Péninsule italienne";0
+"Ita1500AnoLou06";"Péninsule italienne";"1475/1530";"Péninsule italienne";0
+"Ita1500AnoLou06";"Péninsule italienne";"1475/1550";"Péninsule italienne";0
+"Ita1510AnoLou07";"Péninsule italienne";"1500/1540";"Péninsule italienne";0
+"Ita14Q3SBottLou03";"Péninsule italienne";"1460/1480";"Péninsule italienne";0
+"Ita14Q3FnoLiLou03";"Péninsule italienne";"1472/1475";"Péninsule italienne";0
+"Ita14Q4NdLLouD";"Péninsule italienne";"1492/1492";"Péninsule italienne";0
+"Ita14Q4NdLLouE";"Péninsule italienne";"1492/1492";"Péninsule italienne";0
+"Ita14Q4NdLLouA";"Péninsule italienne";"1492/1492";"Péninsule italienne";0
+"Ita14Q4NdLLouC";"Péninsule italienne";"1492/1492";"Péninsule italienne";0
+"Ita14Q4NdLLouB";"Péninsule italienne";"1492/1492";"Péninsule italienne";0
+"Ita1460AnoLou08";"Péninsule italienne";"1450/1470";"Péninsule italienne";0
+"Ita1492NdLaLou";"Péninsule italienne";"1491/1493";"Péninsule italienne";0
+"Ita14Q3GdPLou";"Péninsule italienne";"1425/1480";"Péninsule italienne";0
+"Ita1502PintuLou";"Péninsule italienne";"1501/1509";"Péninsule italienne";0
+"Ita1460AnoLou09";"Péninsule italienne";"1450/1500";"Péninsule italienne";0
+"Ita15Q1SBottLou04";"Péninsule italienne";"1500/1525c";"Péninsule italienne";0
+"Ita1475BATLou02";"Péninsule italienne";"1470/1530";"Péninsule italienne";0
+"Ita14Q3PerLou06";"Péninsule italienne";"1473/1475";"Péninsule italienne";0
+"Ita14Q3PerLou07";"Péninsule italienne";"1473/1475";"Péninsule italienne";0
+"Ita14Q3PerLou08";"Péninsule italienne";"1473/1475";"Péninsule italienne";0
+"Ita15X1GaroLou02";"Péninsule italienne";"1475/1550";"Péninsule italienne";0
+"Ita1475SellLou";"Péninsule italienne";"1470/1493";"Péninsule italienne";0
+"Ita14Q3SBottLou05";"Péninsule italienne";"1425/1480";"Péninsule italienne";0
+"Ita1450LoSpLou01";"Péninsule italienne";"1425/1528";"Péninsule italienne";0
+"Ita1500AnoLou07";"Péninsule italienne";"1475/1550";"Péninsule italienne";0
+"Ita1475FFrLou";"Péninsule italienne";"1470/1530";"Péninsule italienne";0
+"Ita15X2AnoLou";"Péninsule italienne";"1525/1625";"Péninsule italienne";0
+"Ita1475LdCLou";"Péninsule italienne";"1475/1530";"Péninsule italienne";0
+"Ita1513FFrLou";"Péninsule italienne";"1513/1513";"Péninsule italienne";0
+"ItaLFa1513Lou";"Péninsule italienne";"1513/1513";"Péninsule italienne";0
+"Ita1500RaphLou";"Péninsule italienne";"1475/1600";"Péninsule italienne";0
+"Ita15X1MDALou";"Péninsule italienne";"1475/1550";"Péninsule italienne";0
+"Ita15X2GMuzLou";"Péninsule italienne";"1550/1625";"Péninsule italienne";0
+"Ita1511LoSpLou02";"Péninsule italienne";"1511/1511";"Péninsule italienne";0
+"Ita14Q4NPiLou";"Péninsule italienne";"1475/1525";"Péninsule italienne";0
+"Ita1500PCoccLou";"Péninsule italienne";"1475/1530";"Péninsule italienne";0
+"Ita1493SignoLou";"Péninsule italienne";"1493/1494";"Péninsule italienne";0
+"Ita1575OrtLou";"Péninsule italienne";"1570/1630";"Péninsule italienne";0
+"Ita1504GdiPaLou";"Péninsule italienne";"1504/1512";"Péninsule italienne";0
+"Ita1518BFaLou";"Péninsule italienne";"1518/1518";"Péninsule italienne";0
+"Ita15X1AnoLou";"Péninsule italienne";"1475/1550";"Péninsule italienne";0
+"Ita1500AnoLou08";"Péninsule italienne";"1475/1540";"Péninsule italienne";0
+"SEm1515HWertBNM01";"Pays germaniques";"1515/1515";"Pays germaniques";0
+"SEm1515HWertBNM02";"Pays germaniques";"1515/1515";"Pays germaniques";0
+"SEm1515HWertBNM03";"Pays germaniques";"1515/1515";"Pays germaniques";0
+"SEm1515HWertBNM04";"Pays germaniques";"1515/1515";"Pays germaniques";0
+"Ita1530GaroPamph";"Péninsule italienne";"1520/1540";"Péninsule italienne";0
+"Ita1518GaroPamph";"Péninsule italienne";"1517/1519";"Péninsule italienne";0
+"PBE1610JB1atPamph01";"Pays-Bas espagnols (XVIIᵉ s)";"1600/1620";"Pays-Bas espagnols (XVIIᵉ s)";0
+"PBE1600JB1HB1Pamph01";"Pays-Bas espagnols (XVIIᵉ s)";"1575/1625";"Pays-Bas espagnols (XVIIᵉ s)";0
+"Ita1510LMaPamph01";"Péninsule italienne";"1500/1520";"Péninsule italienne";0
+"Ita1600VanniPamph";"Péninsule italienne";"1575/1650";"Péninsule italienne";0
+"Ita1525AnoFerrPamph";"Péninsule italienne";"1525/1525";"Péninsule italienne";0
+"SEm1505BStriGNM";"Pays germaniques";"1500/1507";"Pays germaniques";0
+"SEm1584LCaJGNM";"Pays germaniques";"1584/1584";"Pays germaniques";0
+"SEm1518AAlGNM";"Pays germaniques";"1518/1518";"Pays germaniques";0
+"SEm1520AAlGNM01";"Pays germaniques";"1510/1530";"Pays germaniques";0
+"SEm1520AAlGNM02";"Pays germaniques";"1510/1530";"Pays germaniques";0
+"SEm1520AAlGNM03";"Pays germaniques";"1510/1530";"Pays germaniques";0
+"SEm1515MRSbGNM01";"Pays germaniques";"1510/1520";"Pays germaniques";0
+"SEm1515MRSbGNM02";"Pays germaniques";"1510/1520";"Pays germaniques";0
+"SEm1522BBeGNM01";"Pays germaniques";"1521/1525";"Pays germaniques";0
+"SEm1522BBeGNM02";"Pays germaniques";"1522/1524";"Pays germaniques";0
+"SEm1505MGutGNM01";"Pays germaniques";"1500/1510";"Pays germaniques";0
+"SEm1505MGutGNM02";"Pays germaniques";"1500/1510";"Pays germaniques";0
+"CH1480MOeBDiBA01";"Confédération helvétique";"1470/1530";"Confédération helvétique";0
+"CH1516AnoDiBA01A";"Confédération helvétique";"1516/1516";"Confédération helvétique";0
+"CH1516AnoDiBA01B";"Confédération helvétique";"1516/1516";"Confédération helvétique";0
+"CH1480MOeBDiBA02A";"Confédération helvétique";"1470/1530";"Confédération helvétique";0
+"CH1480MOeBDiBA02B";"Confédération helvétique";"1470/1530";"Confédération helvétique";0
+"CH1480MOeBDiBA02C";"Confédération helvétique";"1470/1530";"Confédération helvétique";0
+"CH1480MOeBDiBA02D";"Confédération helvétique";"1470/1530";"Confédération helvétique";0
+"CH1480MOeBDiBA03A";"Confédération helvétique";"1470/1530";"Confédération helvétique";0
+"CH1480MOeBDiBA03B";"Confédération helvétique";"1470/1530";"Confédération helvétique";0
+"CH1500AnoDiBA01";"Confédération helvétique";"1475/1530";"Confédération helvétique";0
+"Fra1500AnoDiBA01";"Royaume de France";"1500/1515";"Royaume de France";0
+"Ita1480VFoDiBA";"Péninsule italienne";"1480/1500";"Péninsule italienne";0
+"Fra1600AnoDiBA01";"Royaume de France";"1600/1699";"Royaume de France";0
+"Fra155XAnoDiBA";"Royaume de France";"1530/1570";"Royaume de France";0
+"Fra1505MComDiBA";"Royaume de France";"1505/1531";"Royaume de France";0
+"Ita1500BramRijks01";"Péninsule italienne";"1475/1540";"Péninsule italienne";0
+"Ita1510LMaRijks01";"Péninsule italienne";"1500/1528";"Péninsule italienne";0
+"Ita1490LCoRijks01";"Péninsule italienne";"1480/1520";"Péninsule italienne";0
+"Ita1485SellRijks01";"Péninsule italienne";"1480/1530";"Péninsule italienne";0
+"Ita1470ZagaRijks01";"Péninsule italienne";"1460/1510";"Péninsule italienne";0
+"Ita1515GaroRijks01";"Péninsule italienne";"1510/1550";"Péninsule italienne";0
+"Ita1525GFerrRijks01";"Péninsule italienne";"1520/1540";"Péninsule italienne";0
+"Esp1475AnoRijks01";"Espagne";"1470/1500";"Espagne";0
+"SEm1490AnoRijks01";"Pays germaniques";"1480/1500";"Pays germaniques";0
+"PBa1557AnoRijks01";"Pays-Bas (XVIᵉ s)";"1556/1625";"Pays-Bas (XVIᵉ s)";0
+"PBa1500MPerrRijks01";"Pays-Bas (XVIᵉ s)";"1475/1530";"Pays-Bas (XVIᵉ s)";0
+"Ita1535GaroRijks01";"Péninsule italienne";"1530/1540";"Péninsule italienne";0
+"SEm1480MLUrsRijks01";"Pays germaniques";"1470/1490";"Pays germaniques";0
+"Ita1512CimaRijks01";"Péninsule italienne";"1512/1517";"Péninsule italienne";0
+"SEm1500AnoRijks01";"Pays germaniques";"1475/1525";"Pays germaniques";0
+"SEm1475GleisRijks";"Pays germaniques";"1470/1525";"Pays germaniques";0
+"SEm1500AnoRijks02";"Pays germaniques";"1475/1525";"Pays germaniques";0
+"Ita1480MAlleRijks01";"Péninsule italienne";"1480/1515";"Péninsule italienne";0
+"Ita1481VCriRijks01";"Péninsule italienne";"1481/1502";"Péninsule italienne";0
+"Ita1500AmBRijks01";"Péninsule italienne";"1500/1523";"Péninsule italienne";0
+"Ita1490MacrRijks01";"Péninsule italienne";"1490/1527";"Péninsule italienne";0
+"Ita1525PordRijks01";"Péninsule italienne";"1520/1575";"Péninsule italienne";0
+"Ita1510MFogoRijks01";"Péninsule italienne";"1510/1520";"Péninsule italienne";0
+"PU1609AnoRijks01";"Provinces-Unies";"1608/1634";"Provinces-Unies";0
+"PU1627vBorcRijks";"Provinces-Unies";"1627/1627";"Provinces-Unies";0
+"PBE1610FF2Rijks";"Pays-Bas espagnols (XVIIᵉ s)";"1600/1630";"Pays-Bas espagnols (XVIIᵉ s)";0
+"PBE1616FF2Rijks";"Pays-Bas espagnols (XVIIᵉ s)";"1616/1616";"Pays-Bas espagnols (XVIIᵉ s)";0
+"PBa1600BosRijks";"Pays-Bas (XVIᵉ s)";"1575/1625";"Pays-Bas (XVIᵉ s)";0
+"Ita1498FraBSMarc";"Péninsule italienne";"1497/1499";"Péninsule italienne";0
+"Ita1500AnoSMarc";"Péninsule italienne";"1475/1525";"Péninsule italienne";0
+"Ita1463AMaOff";"Péninsule italienne";"1463/1464";"Péninsule italienne";0
+"Ita1475VerroetLeoVOff";"Péninsule italienne";"1460/1480";"Péninsule italienne";0
+"Ita1472LeoVOff";"Péninsule italienne";"1471/1473";"Péninsule italienne";0
+"Ita1478FnoLiOff";"Péninsule italienne";"1477/1490";"Péninsule italienne";0
+"Ita1493FnoLiOff";"Péninsule italienne";"1492/1500";"Péninsule italienne";0
+"Ita1496FnoLiOff";"Péninsule italienne";"1496/1496";"Péninsule italienne";0
+"Ita1495SBottOff1";"Péninsule italienne";"1490/1500";"Péninsule italienne";0
+"Ita1485SBottOff";"Péninsule italienne";"1480/1490";"Péninsule italienne";0
+"Ita1487SBottOff";"Péninsule italienne";"1486/1488";"Péninsule italienne";0
+"Ita1488SBottOff";"Péninsule italienne";"1487/1500";"Péninsule italienne";0
+"Ita1489SBottOff";"Péninsule italienne";"1489/1490";"Péninsule italienne";0
+"Ita1490PredisOff";"Péninsule italienne";"1490/1500";"Péninsule italienne";0
+"Ita1492PerOff1";"Péninsule italienne";"1491/1493";"Péninsule italienne";0
+"Ita1493PerOff";"Péninsule italienne";"1492/1495";"Péninsule italienne";0
+"Ita1500PalmOff";"Péninsule italienne";"1475/1510";"Péninsule italienne";0
+"Ita1500MemOff";"Péninsule italienne";"1475/1525";"Péninsule italienne";0
+"Ita1495LdCOff";"Péninsule italienne";"1490/1498";"Péninsule italienne";0
+"Ita1505LdCOff1";"Péninsule italienne";"1500/1520";"Péninsule italienne";0
+"Ita1505FMainOff";"Péninsule italienne";"1505/1505";"Péninsule italienne";0
+"Ita1485SignoOff";"Péninsule italienne";"1486/1489";"Péninsule italienne";0
+"Ita1510SignoOff1";"Péninsule italienne";"1500/1520";"Péninsule italienne";0
+"Ita1510AnoOff";"Péninsule italienne";"1510/1520";"Péninsule italienne";0
+"Ita1503RaphOff01";"Péninsule italienne";"1501/1503";"Péninsule italienne";0
+"Ita1518RaphOff";"Péninsule italienne";"1517/1519";"Péninsule italienne";0
+"Ita1510BrescOff";"Péninsule italienne";"1510/1520";"Péninsule italienne";0
+"Ita1510BugiaOff";"Péninsule italienne";"1500/1520";"Péninsule italienne";0
+"Ita1510AdSOff";"Péninsule italienne";"1500/1520";"Péninsule italienne";0
+"Ita1515AdSOff";"Péninsule italienne";"1510/1520";"Péninsule italienne";0
+"Ita1513IndacOff";"Péninsule italienne";"1512/1514";"Péninsule italienne";0
+"Ita1515GranOff";"Péninsule italienne";"1510/1518";"Péninsule italienne";0
+"Ita1517GranOff";"Péninsule italienne";"1516/1518";"Péninsule italienne";0
+"Ita1510BugiaOff1";"Péninsule italienne";"1500/1520";"Péninsule italienne";0
+"Ita1517BacchOff";"Péninsule italienne";"1516/1518";"Péninsule italienne";0
+"Ita1515PuliOff";"Péninsule italienne";"1510/1520";"Péninsule italienne";0
+"Ita1522LeonbrOff";"Péninsule italienne";"1521/1523";"Péninsule italienne";0
+"Ita1512PiombOff";"Péninsule italienne";"1512/1512";"Péninsule italienne";0
+"Ita1474MAlbChaBA";"Péninsule italienne";"1474/1515";"Péninsule italienne";0
+"Ita1459GBelCollP";"Péninsule italienne";"1459/1516";"Péninsule italienne";0
+"Ita1450GCozLMdPP";"Péninsule italienne";"1450/1517";"Péninsule italienne";0
+"Ita1616CDoMarBA";"Péninsule italienne";"1616/1686";"Péninsule italienne";0
+"Ita1460DGhiLou";"Péninsule italienne";"1460/1513";"Péninsule italienne";0
+"PBa1450MdRedPra03";"Pays-Bas (XVIᵉ s)";"1425/1475";"Pays-Bas (XVIᵉ s)";0
+"PBa1435WeydPra";"Pays-Bas (XVIᵉ s)";"1435/1443";"Pays-Bas (XVIᵉ s)";0
+"Esp1445NFrancPra";"Espagne";"1445/1460";"Espagne";0
+"Ita1517GRoGFPenPra";"Péninsule italienne";"1516/1518";"Péninsule italienne";0
+"PBa1520JBeerEco";"Pays-Bas (XVIᵉ s)";"1510/1530";"Pays-Bas (XVIᵉ s)";0
+"Ita1506MdOgEco";"Péninsule italienne";"1506/1506";"Péninsule italienne";0
+"Ita1480AnoEco01";"Péninsule italienne";"1470/1500";"Péninsule italienne";0
+"Ita1480AnoEco02";"Péninsule italienne";"1470/1500";"Péninsule italienne";0
+"Ita1480AnoEco03";"Péninsule italienne";"1470/1500";"Péninsule italienne";0
+"Ita1480AnoEco04";"Péninsule italienne";"1470/1500";"Péninsule italienne";0
+"Ita1505SBottEco";"Péninsule italienne";"1500/1520";"Péninsule italienne";0
+"Fra1519NBeEco";"Royaume de France";"1518/1530";"Royaume de France";0
+"Fra1500AnoEco01";"Royaume de France";"1475/1575";"Royaume de France";0
+"Fra1500AnoEco02";"Royaume de France";"1475/1575";"Royaume de France";0
+"Fra1515JLioEco01";"Royaume de France";"1515/1515";"Royaume de France";0
+"Fra1515JLioEco02";"Royaume de France";"1515/1515";"Royaume de France";0
+"Fra1515JLioEco03";"Royaume de France";"1515/1515";"Royaume de France";0
+"Esp1500AnoEco";"Espagne";"1475/1625";"Espagne";0
+"Fra1600AnoEco";"Royaume de France";"1575/1700";"Royaume de France";0
+"Esp1468GallDiBA";"Espagne";"1468/1507";"Espagne";0
+"Ita1625NomeDiBA";"Péninsule italienne";"1625/1651";"Péninsule italienne";0
+"PBE1500AnoMons";"Pays-Bas espagnols (XVIIᵉ s)";"1500/1500";"Pays-Bas espagnols (XVIIᵉ s)";0
+"Esp1500GallCollP";"Espagne";"1500/1510";"Espagne";0
+"Esp1486SedaCollP";"Espagne";"1486/1512";"Espagne";0
+"Esp1491PBerrPra01";"Espagne";"1490/1500";"Espagne";0
+"Esp1508JBorgoDallas";"Espagne";"1508/1514";"Espagne";0
+"Por1500AnoMASA01";"Portugal (?)";"1475/1600";"Portugal";1
+"Por1500AnoMASA02";"Portugal";"1475/1700";"Portugal";0
+"PBa1485AnoFCG";"Pays-Bas (XVIᵉ s)";"1470/1500";"Pays-Bas (XVIᵉ s)";0
+"Por1500VGilEFMdC";"Portugal";"1475/1530";"Portugal";0
+"Por1530FCarloEFMdC";"Portugal";"1520/1540";"Portugal";0
+"Por1508FHenrEFMdC01";"Portugal";"1507/1513";"Portugal";0
+"Por1520FCarloEFMdC";"Portugal";"1510/1540";"Portugal";0
+"Por1508FHenrEFMdC02";"Portugal";"1507/1513";"Portugal";0
+"Por1508FHenrEFMdC03";"Portugal";"1507/1513";"Portugal";0
+"Ita1550AnoEFMdC";"Péninsule italienne";"1525/1575";"Péninsule italienne";0
+"PBa1525AYsenEFMdC";"Pays-Bas (XVIᵉ s)";"1520/1575";"Pays-Bas (XVIᵉ s)";0
+"PBa1500MREEFMdC";"Pays-Bas (XVIᵉ s)";"1475/1525";"Pays-Bas (XVIᵉ s)";0
+"Por1550AnoEFMdC_01";"Portugal";"1525/1625";"Portugal";0
+"Por1552DConEFMdC";"Portugal";"1551/1555";"Portugal";0
+"Por1550DConEFMdC_01";"Portugal";"1525/1575";"Portugal";0
+"Por1540DConEFMdC";"Portugal";"1530/1562";"Portugal";0
+"Ita1515PontDiBA";"Péninsule italienne";"1510/1520";"Péninsule italienne";0
+"Por1550DConEFMdC_02";"Portugal";"1525/1575";"Portugal";0
+"Por1546DConEFMdC";"Portugal";"1546/1546";"Portugal";0
+"Por1550AnoEFMdC_02";"Portugal";"1525/1575";"Portugal";0
+"Por1544GLopEFMdC01";"Portugal";"1544/1544";"Portugal";0
+"Por1544GLopEFMdC02";"Portugal";"1544/1544";"Portugal";0
+"Por1525AnoEFMdC";"Portugal";"1520/1575";"Portugal";0
+"Por1530AnoEFMdC01";"Portugal";"1520/1540";"Portugal";0
+"Por1530AnoEFMdC02";"Portugal";"1520/1540";"Portugal";0
+"Por1615PNunEFMdC01";"Portugal";"1610/1630";"Portugal";0
+"Por1615PNunEFMdC02";"Portugal";"1610/1630";"Portugal";0
+"Por1530GLopMMIPO";"Portugal";"1520/1550";"Portugal";0
+"Por1590DTeixAdCosMMIPO";"Portugal";"1580/1600";"Portugal";0
+"PBa1515CdCoMMIPO";"Pays-Bas (XVIᵉ s)";"1515/1517";"Pays-Bas (XVIᵉ s)";0
+"Por1591DTeixMMIPO01";"Portugal";"1591/1592";"Portugal";0
+"Por1591DTeixMMIPO02";"Portugal";"1591/1592";"Portugal";0
+"Por1591DTeixMMIPO03";"Portugal";"1591/1592";"Portugal";0
+"Por1647JAyaMNSR";"Portugal";"1646/1648";"Portugal";0
+"Por1520FCarloMNSR";"Portugal";"1510/1530";"Portugal";0
+"PBa1500WMuelMNSR";"Pays-Bas (XVIᵉ s)";"1475/1525";"Pays-Bas (XVIᵉ s)";0
+"Por1511VFernaMNSR01";"Portugal";"1511/1515";"Portugal";0
+"Por1511VFernaMNSR02";"Portugal";"1511/1515";"Portugal";0
+"Por1500AnoMNSR01";"Japon";"1573/1603";"Japon";0
+"PBE1600AnoMNSR";"Pays-Bas espagnols (XVIIᵉ s)";"1575/1700";"Pays-Bas espagnols (XVIIᵉ s)";0
+"Por1500AnoMNSR02";"Portugal";"1475/1600";"Portugal";0
+"Por1508FHenrMNAA01";"Portugal";"1508/1511";"Portugal";0
+"Por1508FHenrMNAA02";"Portugal";"1508/1511";"Portugal";0
+"Por1508FHenrMNAA03";"Portugal";"1508/1511";"Portugal";0
+"Por1508FHenrMNAA04";"Portugal";"1508/1511";"Portugal";0
+"Por1508FHenrMNAA05";"Portugal";"1508/1512";"Portugal";0
+"Por1515JAfoMNAA01";"Portugal";"1515/1515";"Portugal";0
+"Por1515JAfoMNAA02";"Portugal";"1515/1515";"Portugal";0
+"Por1515JAfoMNAA03";"Portugal";"1515/1515";"Portugal";0
+"Por1515JAfoMNAA04";"Portugal";"1515/1515";"Portugal";0
+"Por1515JAfoMNAA05";"Portugal";"1515/1515";"Portugal";0
+"Por1515JAfoMNAA06";"Portugal";"1515/1515";"Portugal";0
+"Por1515JAfoMNAA07";"Portugal";"1515/1515";"Portugal";0
+"Por1508FHenrMNAA06";"Portugal";"1508/1512";"Portugal";0
+"Por1520AnoMNAA01";"Portugal";"1510/1530";"Portugal";0
+"Por1515MdLouMNAA";"Portugal";"1515/1518";"Portugal";0
+"Por1523GLopMNAA01";"Portugal";"1522/1528";"Portugal";0
+"Por1523GLopMNAA02";"Portugal";"1522/1528";"Portugal";0
+"Por1523GLopMNAA03";"Portugal";"1522/1528";"Portugal";0
+"Por1523GLopMNAA04";"Portugal";"1522/1528";"Portugal";0
+"Por1523GLopMNAA05";"Portugal";"1522/1528";"Portugal";0
+"Por1523GLopMNAA06";"Portugal";"1522/1528";"Portugal";0
+"Por1523GLopMNAA07";"Portugal";"1522/1528";"Portugal";0
+"Por1523GLopMNAA08";"Portugal";"1522/1528";"Portugal";0
+"Por1523GLopMNAA09";"Portugal";"1522/1528";"Portugal";0
+"Por1529FCarloMNAA";"Portugal";"1529/1529";"Portugal";0
+"Por1520FCarloMNAA01";"Portugal";"1510/1540";"Portugal";0
+"Por1520FCarloMNAA02";"Portugal";"1510/1540";"Portugal";0
+"Por1520FCarloMNAA03";"Portugal";"1510/1540";"Portugal";0
+"Por1520FCarloMNAA04";"Portugal";"1510/1540";"Portugal";0
+"Por1525VFernaMNAA";"Portugal";"1520/1530";"Portugal";0
+"Por1520VGilMNAA";"Portugal";"1510/1530";"Portugal";0
+"Por1521FigueMNAA";"Portugal";"1521/1530";"Portugal";0
+"PBa1500AnoMNAA01";"Pays-Bas (XVIᵉ s)";"1475/1525";"Pays-Bas (XVIᵉ s)";0
+"PBa1500AnoMNAA02";"Pays-Bas (XVIᵉ s)";"1475/1525";"Pays-Bas (XVIᵉ s)";0
+"PBa1500AnoMNAA03";"Pays-Bas (XVIᵉ s)";"1475/1525";"Pays-Bas (XVIᵉ s)";0
+"Ita1500AnoMNAA01";"Péninsule italienne";"1475/1525";"Péninsule italienne";0
+"Ita1510CsSMNAA";"Péninsule italienne";"1500/1520";"Péninsule italienne";0
+"Ita1515LMaMNAA";"Péninsule italienne";"1510/1520";"Péninsule italienne";0
+"Ita1500AnoMNAA02";"Péninsule italienne";"1475/1525";"Péninsule italienne";0
+"PBa1510QMetMNAA";"Pays-Bas (XVIᵉ s)";"1500/1517";"Pays-Bas (XVIᵉ s)";0
+"PBa1520AnoMNAA01";"Pays-Bas (XVIᵉ s)";"1500/1508";"Pays-Bas (XVIᵉ s)";0
+"PBa1550AnoMNAA01";"Pays-Bas (XVIᵉ s)";"1525/1575";"Pays-Bas (XVIᵉ s)";0
+"Ita1602AlloMNAA";"Péninsule italienne";"1602/1602";"Péninsule italienne";0
+"SEm1490MGrossPraCSA";"Pays germaniques";"1490/1499";"Pays germaniques";0
+"SEm1480AnoPraCSA";"Pays germaniques";"1480/1498";"Pays germaniques";0
+"SEm1540MIWPraCSA";"Pays germaniques";"1545/1547";"Pays germaniques";0
+"Por1592DTeixMMIPO";"Portugal";"1592/1592";"Portugal";0
+"Por1608AnoMMIPO";"Portugal";"1608/1570";"Portugal";0
+"SEm1500MLAPraCSA01";"Pays germaniques";"1475/1525";"Pays germaniques";0
+"SEm1520LCaPraCSA";"Pays germaniques";"1520/1525";"Pays germaniques";0
+"SEm1520GHerlPraCSA";"Pays germaniques";"1510/1530";"Pays germaniques";0
+"SEm1500MLAPraCSA02";"Pays germaniques";"1475/1525";"Pays germaniques";0
+"SEm1515MLAPraCSA01";"Pays germaniques";"1510/1520";"Pays germaniques";0
+"SEm1515MLAPraCSA02";"Pays germaniques";"1510/1520";"Pays germaniques";0
+"SEm1525AAlPraCSA";"Pays germaniques";"1520/1530";"Pays germaniques";0
+"SEm1512LCaPraCSA";"Pays germaniques";"1512/1516";"Pays germaniques";0
+"SEm1500MHKAPraCSA";"Pays germaniques";"1475/1525";"Pays germaniques";0
+"SEm1510AnoPraCSA01";"Pays germaniques";"1500/1520";"Pays germaniques";0
+"PBa1475AnoMNAA01";"Pays-Bas (XVIᵉ s)";"1475/1500";"Pays-Bas (XVIᵉ s)";0
+"PBa1500AnoMNAA04";"Pays-Bas (XVIᵉ s)";"1475/1525";"Pays-Bas (XVIᵉ s)";0
+"PBa1475AnoMNAA02";"Pays-Bas (XVIᵉ s)";"1475/1500";"Pays-Bas (XVIᵉ s)";0
+"PBa1500AnoMNAA05";"Pays-Bas (XVIᵉ s)";"1485/1515";"Pays-Bas (XVIᵉ s)";0
+"PBa1500AnoMNAA06";"Pays-Bas (XVIᵉ s)";"1475/1525";"Pays-Bas (XVIᵉ s)";0
+"PBa1500AnoMNAA07";"Pays-Bas (XVIᵉ s)";"1475/1525";"Pays-Bas (XVIᵉ s)";0
+"Esp1490AnoMNAA";"Espagne";"1480/1500";"Espagne";0
+"Esp1495AnoMNAA";"Espagne";"1490/1520";"Espagne";0
+"Esp1500AnoMNAA01";"Espagne";"1475/1525";"Espagne";0
+"Esp1500AnoMNAA02";"Espagne";"1475/1525";"Espagne";0
+"Esp1500AnoMNAA03";"Espagne";"1475/1525";"Espagne";0
+"Esp1500AnoMNAA04";"Espagne";"1475/1525";"Espagne";0
+"PBa1509QMetMNAA01";"Pays-Bas (XVIᵉ s)";"1509/1511";"Pays-Bas (XVIᵉ s)";0
+"PBa1509QMetMNAA02";"Pays-Bas (XVIᵉ s)";"1509/1511";"Pays-Bas (XVIᵉ s)";0
+"PBa1509QMetMNAA03";"Pays-Bas (XVIᵉ s)";"1509/1511";"Pays-Bas (XVIᵉ s)";0
+"PBa1520AnoMNAA";"Pays-Bas (XVIᵉ s)";"1510/1525";"Pays-Bas (XVIᵉ s)";0
+"SEm1510MLAPraCSA01";"Pays germaniques";"1510/1525";"Pays germaniques";0
+"Ita1500AnoPraCh";"Péninsule italienne";"1500/1525";"Péninsule italienne";0
+"Ita1575VeroPraCh";"Péninsule italienne";"1570/1580";"Péninsule italienne";0
+"Ang1540HHJPraCh";"Angleterre";"1530/1550";"Angleterre";0
+"SEm1520MOstenPraCh";"Pays germaniques";"1520/1559";"Pays germaniques";0
+"Por1470GonNuMNAA01";"Portugal";"1460/1500";"Portugal";0
+"Por1470GonNuMNAA02";"Portugal";"1460/1500";"Portugal";0
+"Por1537VazMNAA";"Portugal";"1540/1560";"Portugal";0
+"Por1520FigueMNAA01";"Portugal";"1510/1540";"Portugal";0
+"Por1500AnoMNAA01";"Portugal";"1475/1600";"Portugal";0
+"Por1540AnoMNAA01";"Portugal";"1530/1575";"Portugal";0
+"Por1515JAfoMNAA08";"Portugal";"1515/1515";"Portugal";0
+"Por1550AnoMNAA01";"Portugal";"1520/1550";"Portugal";0
+"Por1550AnoMNAA02";"Portugal";"1520/1550";"Portugal";0
+"Ita1520GranASH01";"Péninsule italienne";"1500/1527";"Péninsule italienne";0
+"Ita1520GranASH02";"Péninsule italienne";"1500/1527";"Péninsule italienne";0
+"SEm1490AnoASH";"Pays germaniques";"1471/1500";"Pays germaniques";0
+"PBa1520AnoASH";"Pays-Bas (XVIᵉ s)";"1480/1530";"Pays-Bas (XVIᵉ s)";0
+"PBa1500AnoASH";"Pays-Bas (XVIᵉ s)";"1475/1600";"Pays-Bas (XVIᵉ s)";0
+"Ita1555VenuASH";"Péninsule italienne";"1540/1575";"Péninsule italienne";0
+"SEm1514HSchASH";"Pays germaniques";"1514/1514";"Pays germaniques";0
+"Ita1441SellCCO";"Péninsule italienne";"1455/1493";"Péninsule italienne";0
+"Ita1466RGarbCCO";"Péninsule italienne";"1470/1524";"Péninsule italienne";0
+"Ita1480LMaCCO";"Péninsule italienne";"1475/1530";"Péninsule italienne";0
+"Por1519AnoMNAA01";"Portugal";"1518/1520";"Portugal";0
+"Por1549Md1MNAA";"Portugal";"1549/1549";"Portugal";0
+"Por1520AnoMNAA02";"Portugal";"1510/1540";"Portugal";0
+"Por1519AnoMNAA02";"Portugal";"1518/1520";"Portugal";0
+"Por1535GLopMNAA";"Portugal";"1530/1540";"Portugal";0
+"Por1500AnoMNAA02";"Portugal";"1475/1525";"Portugal";0
+"Por1530AnoMNAA01";"Portugal";"1520/1550";"Portugal";0
+"Por1540AnoMNAA02";"Portugal";"1530/1560";"Portugal";0
+"Por1508FHenrMNAA07";"Portugal";"1508/1511";"Portugal";0
+"Por1608DLPMNAA";"Portugal";"1608/1608";"Portugal";0
+"Por1600AnoMNAA01";"Portugal";"1575/1700";"Portugal";0
+"PBa1550AnoMNAA02";"Pays-Bas (XVIᵉ s)";"1525/1575";"Pays-Bas (XVIᵉ s)";0
+"PBa1500AnoMNAA08";"Pays-Bas (XVIᵉ s)";"1542/1590";"Pays-Bas (XVIᵉ s)";0
+"PBa1500AnoMNAA09";"Pays-Bas (XVIᵉ s)";"1475/1530";"Pays-Bas (XVIᵉ s)";0
+"Esp1600AnoMNAA";"Espagne";"1575/1700";"Espagne";0
+"Por1500AnoMNAA03";"Portugal";"1475/1550";"Portugal";0
+"Por1550FdHMNAA";"Portugal";"1525/1554";"Portugal";0
+"Por1540AnoMNAA03";"Portugal";"1530/1575";"Portugal";0
+"Por1540AnoMNAA04";"Portugal";"1530/1575";"Portugal";0
+"Esp1500AnoMNAA05";"Espagne";"1475/1600";"Espagne";0
+"Por1500FigueMNAA";"Portugal";"1475/1540";"Portugal";0
+"Por1520AnoMNAA03";"Portugal";"1510/1550";"Portugal";0
+"Por1600PaivMNAA";"Portugal";"1575/1640";"Portugal";0
+"Ita1700AnoMNAA01";"Péninsule italienne";"1675/1775";"Péninsule italienne";0
+"Por1500MdSMNAA01";"Portugal";"1475/1600";"Portugal";0
+"Por1500MdSMNAA02";"Portugal";"1475/1600";"Portugal";0
+"Por1500MdSMNAA03";"Portugal";"1475/1600";"Portugal";0
+"Por1500MdSMNAA04";"Portugal";"1475/1600";"Portugal";0
+"Por1500MdSMNAA05";"Portugal";"1475/1600";"Portugal";0
+"Por1500MdSMNAA06";"Portugal";"1475/1600";"Portugal";0
+"Por1600AnoMNAA02";"Portugal";"1575/1700";"Portugal";0
+"Por1600AnoMNAA03";"Portugal";"1575/1700";"Portugal";0
+"PBE1648JvKMNAA";"Portugal";"1648/1648";"Portugal";0
+"PBa1505AnoMNAA";"Pays-Bas (XVIᵉ s)";"1500/1540";"Pays-Bas (XVIᵉ s)";0
+"Por1600AnoMNAA04";"Portugal";"1725/1800";"Portugal";0
+"Ita1600AnoMNAA";"Péninsule italienne (?)";"1575/1700";"Péninsule italienne";1
+"Ita1525LMaMNAA";"Péninsule italienne";"1525/1525";"Péninsule italienne";0
+"Esp1500AnoMNAA06";"Espagne";"1460/1525";"Espagne";0
+"Por1575MBOMNAA";"Portugal";"1570/1600";"Portugal";0
+"Por1537GFernaMNAA01";"Portugal";"1537/1537";"Portugal";0
+"Por1600AnoMNAA05";"Portugal";"1575/1700";"Portugal";0
+"As1600AnoMNAA";"Asie";"1570/1620";"Asie";0
+"As1555AnoMNAA01";"Asie";"1550/1590";"Asie";0
+"As1555AnoMNAA02";"Asie";"1550/1590";"Asie";0
+"Ita1560CesuWall";"Péninsule italienne";"1550/1571";"Péninsule italienne";0
+"Ang1545BettesTB";"Angleterre";"1545/1545";"Angleterre";0
+"Ang1590AnoTB";"Angleterre";"1580/1600";"Angleterre";0
+"Ita1500AnoDiBA";"Péninsule italienne";"1500/1550";"Péninsule italienne";0
+"SEm1478MRoCoDiBA01";"Pays germaniques";"1478/1485";"Pays germaniques";0
+"SEm1478MRoCoDiBA02";"Pays germaniques";"1478/1485";"Pays germaniques";0
+"Ang1540AnoHoly";"Angleterre";"1570/1590";"Angleterre";0
+"Ang1610AnoHoly";"Angleterre";"1600/1650";"Angleterre";0
+"SEm1520LCaPraCh";"Pays germaniques";"1520/1522";"Pays germaniques";0
+"SEm1510AnoPraCSA02";"Pays germaniques";"1500/1520";"Pays germaniques";0
+"SEm1510AnoPraCSA03";"Pays germaniques";"1500/1520";"Pays germaniques";0
+"SEm1510MLAPraCSA02";"Pays germaniques";"1500/1520";"Pays germaniques";0
+"SEm1510MLAPraCSA03";"Pays germaniques";"1500/1520";"Pays germaniques";0
+"PBa1580MCoxPraPS";"Pays-Bas (XVIᵉ s)";"1530/1580";"Pays-Bas (XVIᵉ s)";0
+"Ita1501CaroPraPS";"Péninsule italienne";"1501/1550";"Péninsule italienne";0
+"SEm1520LCaPraPS01";"Pays germaniques";"1520/1522";"Pays germaniques";0
+"SEm1525MIWPraPS";"Pays germaniques";"1520/1530";"Pays germaniques";0
+"PBa1511MFLPraPS";"Pays-Bas (XVIᵉ s)";"1511/1511";"Pays-Bas (XVIᵉ s)";0
+"SEm1517HWertPraPS";"Pays germaniques";"1516/1518";"Pays germaniques";0
+"SEm1515BStriPraPS";"Pays germaniques";"1515/1528";"Pays germaniques";0
+"PBa1482EngePraPS";"Pays-Bas (XVIᵉ s)";"1510/1527";"Pays-Bas (XVIᵉ s)";0
+"SEm1490HHAPraPS";"Pays germaniques";"1480/1500";"Pays germaniques";0
+"SEm1509HHAPraPS01";"Pays germaniques";"1509/1509";"Pays germaniques";0
+"SEm1509HHAPraPS02";"Pays germaniques";"1509/1509";"Pays germaniques";0
+"Ita1502PVenPraPS";"Péninsule italienne";"1502/1504";"Péninsule italienne";0
+"Ita1495LBreaPraPSt01";"Péninsule italienne";"1495/1500";"Péninsule italienne";0
+"Ita1495LBreaPraPSt02";"Péninsule italienne";"1495/1500";"Péninsule italienne";0
+"Ita1510DFerrPraPSt";"Péninsule italienne";"1510/1535";"Péninsule italienne";0
+"PBa1482EngePraPSt";"Pays-Bas (XVIᵉ s)";"1482/1527";"Pays-Bas (XVIᵉ s)";0
+"PBa1525AnoPraPSt";"Pays-Bas (XVIᵉ s)";"1520/1530";"Pays-Bas (XVIᵉ s)";0
+"PBa1510AnoPraPSt";"Pays-Bas (XVIᵉ s)";"1510/1520";"Pays-Bas (XVIᵉ s)";0
+"PBa1493MFrPraPSt";"Pays-Bas (XVIᵉ s)";"1493/1520";"Pays-Bas (XVIᵉ s)";0
+"SEm1506MGutJPraPSt";"Pays germaniques";"1506/1532";"Pays germaniques";0
+"SEm1516HBGPraPSt";"Pays germaniques";"1516/1516";"Pays germaniques";0
+"SEm1499HRaphPraPSt01";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt02";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt03";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt04";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt05";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt06";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt07";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt08";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt09";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt10";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt11";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt12";"Pays germaniques";"1499/1499";"Pays germaniques";0
+"SEm1499HRaphPraPSt13";"Pays germaniques";"1499/1499";"Pays germaniques";0
