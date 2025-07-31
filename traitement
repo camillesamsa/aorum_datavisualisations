@@ -1,0 +1,11 @@
+# Traitement des données
+
+Ce dossier contient les fichiers et scripts relatifs à la préparation des données utilisées pour les visualisations.
+
+Le point de départ est le fichier `base_martyr_clear.ods`. À partir de ce fichier source, nous avons sélectionné manuellement les colonnes pertinentes afin de créer un nouveau fichier `.ods` mieux adapté aux besoins spécifiques des visualisations.
+
+Les données extraites ont ensuite été traitées via des scripts pour améliorer leur cohérence et leur lisibilité. Ce traitement comprend notamment l’harmonisation des valeurs, la normalisation des formats, ainsi que la gestion des incertitudes présentes dans certaines données.
+
+L’ensemble des fichiers traités est conservé dans ce dossier. Ce sont ces fichiers qui servent de base pour la génération des fichiers `.csv` exploités dans les visualisations interactives.
+
+Ces étapes garantissent que les fichiers CSV générés sont optimisés pour une exploration fluide et précise dans les visualisations interactives.
