@@ -59,7 +59,7 @@ Ainsi, les fichiers CSV présents dans le dossier `visualisations/` sont **issus
 2. **Lancer un serveur local** :
    ```bash
    # Avec Python 3
-   python -m http.server 8000
+   python3 -m http.server 8000
    ```
 
 3. **Ouvrir dans le navigateur** :  
