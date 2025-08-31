@@ -9,14 +9,16 @@ Les données sont issues d’analyses portant sur la **provenance**, l’**icono
 
 ## Structure du dépôt
 
-Le dépôt est organisé en deux dossiers principaux :
+Le dépôt est organisé en trois dossiers principaux :
 
 - `visualisations/`  
   Contient les **interfaces HTML/CSS/JS** pour les visualisations interactives. Ces visualisations utilisent des **fichiers CSV** comme source de données, générés à partir des tableurs initiaux.
 
 - `traitement/`  
-  Contient les **scripts Python** (notebooks Jupyter) servant à **nettoyer**, **transformer** et **harmoniser** les données issues des **tableurs au format `.ods`**.  
-  Ces scripts produisent les fichiers CSV utilisés par les visualisations.
+  Contient les **scripts Python** (notebooks Jupyter) servant à **nettoyer**, **transformer** et **harmoniser** les données issues des **tableurs au format `.ods`**.
+
+- `wp3/`  
+  Contient les **graphiques en format .png des données optiques** générés par un **script python .py**. Ces visualisations utilisent un **fichier CSV** comme source de données, générés à partir des tableurs initiaux.
 
 Ainsi, les fichiers CSV présents dans le dossier `visualisations/` sont **issus d’un pipeline de préparation des données** défini dans le dossier `traitements/`.
 
