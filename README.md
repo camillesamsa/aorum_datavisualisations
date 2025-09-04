@@ -47,8 +47,7 @@ Ainsi, les fichiers CSV présents dans le dossier `visualisations/` sont **issus
 
 ### Prérequis
 
-- Navigateur web moderne
-- Serveur HTTP local (recommandé pour éviter les restrictions CORS)
+- Serveur HTTP local
 
 ### Lancer les visualisations
 
